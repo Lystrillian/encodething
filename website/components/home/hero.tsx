@@ -8,10 +8,10 @@ export function Hero() {
   return (
     <div className="relative pb-10">
       <Container>
-        <div className="relative pt-20 md:pt-36 ml-auto">
-          <div className="text-center mx-auto mt-4">
+        <div className="relative pt-20 ml-auto md:pt-36">
+          <div className="mx-auto mt-4 text-center">
             <h1
-              className="text-zinc-900 mx-auto dark:text-white font-medium"
+              className="mx-auto font-medium text-zinc-900 dark:text-white"
               style={{
                 fontSize: 'clamp(1.375rem, 1.054rem + 1.61vw, 2.5rem)',
                 letterSpacing:
@@ -22,7 +22,7 @@ export function Hero() {
               {hero.encodingTool}.
               <span className="text-gray-main">{hero.functionalities}</span>
             </h1>
-            <div className="mt-8 flex flex-wrap justify-center gap-y-4 gap-x-6">
+            <div className="flex flex-wrap justify-center mt-8 gap-y-4 gap-x-6">
               <Link
                 href="/docs/introduction"
                 className="w-full sm:w-max"
@@ -54,7 +54,7 @@ export function Hero() {
                   }}
                   aria-label="How It Works Button"
                 >
-                  <span className="relative whitespace-pre text-center text-base font-semibold leading-none tracking-tight text-white-main z-10">
+                  <span className="relative z-10 text-base font-semibold leading-none tracking-tight text-center whitespace-pre text-white-main">
                     {hero.dataPlay}
                   </span>
                 </button>

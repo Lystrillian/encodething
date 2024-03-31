@@ -24,7 +24,7 @@ export default function BenefitsGrid() {
             className="text-gray-main"
             style={{ fontSize: 'clamp(1rem, 0.943rem + 0.28vw, 1.125rem)' }}
           >
-            <span className="text-white-main font-semibold">
+            <span className="font-semibold text-white-main">
               {benefits.configurationEase}
             </span>{' '}
             {benefits.standardValues}

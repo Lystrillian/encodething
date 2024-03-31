@@ -28,7 +28,7 @@ export default function DescriptionGrid() {
           >
             {description.dataTypes}
           </h2>
-          <div className="flex flex-wrap gap-4 justify-center mx-auto mt-3">
+          <div className="flex flex-wrap justify-center gap-4 mx-auto mt-3">
             {descriptions.map((description, index) => (
               <div
                 className="px-4 bg-layout-main rounded-full min-h-[48px] text-center flex justify-center items-center font-semibold leading-[1.3125] text-gray-main tracking-[-0.05em] shadow-[0_0_0_1px_rgba(255,255,255,0.14)]"
@@ -66,19 +66,19 @@ export default function DescriptionGrid() {
         <div className="shadow-[0_0_0_1px_rgba(255,255,255,0.14)] col-start-1 col-end-3 row-start-3 row-end-3 p-12 lg:py-[90px] lg:px-12 lg:col-start-1 lg:col-end-4 lg:row-start-2 lg:row-end-2 w-full">
           <div className="lg:flex lg:text-left lg:justify-between lg:w-full">
             <p className="lg:max-w-[260px] text-gray-main text-[16px] lg:text-[18px]">
-              <span className="text-white-main font-semibold">
+              <span className="font-semibold text-white-main">
                 {description.dataVariety}
               </span>{' '}
               {description.selectData}
             </p>
             <p className="lg:max-w-[260px] text-gray-main text-[16px] lg:text-[18px]">
-              <span className="text-white-main font-semibold">
+              <span className="font-semibold text-white-main">
                 {description.transformationWays}
               </span>{' '}
               {description.encryptionMethods}
             </p>
             <p className="lg:max-w-[260px] text-gray-main text-[16px] lg:text-[18px]">
-              <span className="text-white-main font-semibold">
+              <span className="font-semibold text-white-main">
                 {description.support}
               </span>{' '}
               {description.languages}
