@@ -11,6 +11,14 @@
     "noImplicitAny": false,
     "paths": {
       // Make sure the root d.ts isn't picked up by TS locally
+      "@assets/*": ["assets/*"],
+      "@components/*": ["./website/components/*"],
+      "@context/*": ["/website/context/*"],
+      "@hooks/*": ["/website/hooks/*"],
+      "@pages/*": ["/website/pages/*"],
+      "@styles/*": ["website/styles/*"],
+      "@types/*": ["/website/types/*"],
+      "@utils/*": ["/website/utils/*"],
       "react": ["node_modules/react"]
     },
     "types": ["vitest/globals"]
