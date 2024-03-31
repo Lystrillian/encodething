@@ -32,10 +32,10 @@ The number of colors that can be represented by this system is 166 or 2563 or 22
 
 An abbreviated, three (hexadecimal)-digit or four-digit form can be used, but can cause errors if software or maintenance scripts are only expecting the long form. Expanding this form to the six-digit form is as simple as repeating each digit: 09C becomes 0099CC as presented on the following CSS example:
 
-<pre>
+```
 .threedigit color: #09C;  
 .sixdigit   color: #0099CC; /* same color as above */
-</pre>
+```
 
 This shorthand form reduces the palette to 4,096 colors, equivalent of 12-bit color as opposed to 24-bit color using the whole six-digit form (16,777,216 colors). This limitation is sufficient for many text-based documents.
 
@@ -112,7 +112,7 @@ Example system color keywords
 
 The CSS3 specification also introduces HSL color space values to style sheets:
 
-<pre>
+```
 /* RGB model */
 color: #F00 /* #rgb */ 
 color: #FF0000 /* #rrggbb */
@@ -133,7 +133,7 @@ color: hsl(120, 50%, 50%) /* pastel green */
 color: hsla(120, 100%, 50%, 1) /* green */
 color: hsla(120, 100%, 50%, 0.5) /* semi-transparent green */
 color: hsla(120, 100%, 50%, 0.1) /* very transparent green */
-</pre>
+```
 
 CSS also supports the special color transparent, which represents an alpha value of zero; by default, transparent is rendered as an invisible nominal black: `rgba(0, 0, 0, 0)`. It was introduced in CSS1 but its scope of use has expanded over the versions.
 

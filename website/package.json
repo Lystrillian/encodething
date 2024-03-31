@@ -22,7 +22,6 @@
     "million": "workspace:*",
     "next": "^14.1.4",
     "nextra": "^2.13.4",
-    
     "nextra-theme-docs": "^2.13.4",
     "postcss": "^8.4.38",
     "react": "^18.2.0",
@@ -41,6 +40,8 @@
     "@types/node": "20.11.30",
     "@types/react": "^18.2.72",
     "@types/react-dom": "^18.2.22",
+    "stylelint": "^16.3.1",
+    "stylelint-config-standard": "^36.0.0",
     "typescript": "^5.4.3"
   }
 }

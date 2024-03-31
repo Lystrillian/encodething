@@ -13,17 +13,7 @@
     - The "html" element is excluded, otherwise a bug in Chrome breaks the CSS hyphens property (https://github.com/elad2412/the-new-css-reset/issues/36)
  */
 *:where(
-    :not(
-        html,
-        iframe,
-        canvas,
-        img,
-        svg,
-        video,
-        audio,
-        #theatrejs-studio-root
-      ):not(svg *, symbol *)
-  ) {
+    :not(html, iframe, canvas, img, svg, video, audio, #theatrejs-studio-root, svg *, symbol *)) {
   all: unset;
   display: revert;
 }
@@ -62,7 +52,7 @@ table {
 /* Safari - solving issue when using user-select:none on the <body> text input doesn't working */
 input,
 textarea {
-  -webkit-user-select: auto;
+  user-select: auto;
 }
 
 /* revert the 'white-space' property for textarea elements on Safari */
@@ -72,7 +62,6 @@ textarea {
 
 /* minimum style to allow to style meter element */
 meter {
-  -webkit-appearance: revert;
   appearance: revert;
 }
 
@@ -99,14 +88,13 @@ display:revert; revert to element instead of attribute */
 
 /* revert for bug in Chromium browsers
 - fix for the content editable attribute will work properly.
-- webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element*/
+- webkit-user-select: auto; added for Safari in case of using user-select:none on wrapper element */
 :where([contenteditable]:not([contenteditable='false'])) {
   -moz-user-modify: read-write;
   -webkit-user-modify: read-write;
   overflow-wrap: break-word;
   -webkit-line-break: after-white-space;
   line-break: after-white-space;
-  -webkit-user-select: auto;
   user-select: auto;
 }
 
@@ -122,13 +110,11 @@ display:revert; revert to element instead of attribute */
 
 @media (prefers-color-scheme: light) {
   body {
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
     margin: 0;
     color: #1f2328;
-    background-color: #ffffff;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans',
-      Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    background-color: #fff;
+    font-family: 'Overused Grotesk', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     word-wrap: break-word;
@@ -156,7 +142,6 @@ display:revert; revert to element instead of attribute */
 
   abbr[title] {
     border-bottom: none;
-    -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted;
   }
 
@@ -174,7 +159,7 @@ display:revert; revert to element instead of attribute */
     font-weight: 600;
     padding-bottom: 0.3em;
     font-size: 2em;
-    border-bottom: 1px solid hsla(210, 18%, 87%, 1);
+    border-bottom: 1px solid hsl(210deg 18% 87% / 100%);
   }
 
   mark {
@@ -206,7 +191,7 @@ display:revert; revert to element instead of attribute */
     border-style: none;
     max-width: 100%;
     box-sizing: content-box;
-    background-color: #ffffff;
+    background-color: #fff;
   }
 
   code,
@@ -225,7 +210,7 @@ display:revert; revert to element instead of attribute */
     box-sizing: content-box;
     overflow: hidden;
     background: transparent;
-    border-bottom: 1px solid hsla(210, 18%, 87%, 1);
+    border-bottom: 1px solid hsl(210deg 18% 87% / 100%);
     height: 0.05em;
     padding: 0;
     margin: 24px 0;
@@ -245,7 +230,6 @@ display:revert; revert to element instead of attribute */
   [type='button'],
   [type='reset'],
   [type='submit'] {
-    -webkit-appearance: button;
     appearance: button;
   }
 
@@ -262,17 +246,15 @@ display:revert; revert to element instead of attribute */
 
   [type='search']::-webkit-search-cancel-button,
   [type='search']::-webkit-search-decoration {
-    -webkit-appearance: none;
     appearance: none;
   }
 
-  ::-webkit-input-placeholder {
+  ::input-placeholder {
     color: inherit;
     opacity: 0.54;
   }
 
   ::-webkit-file-upload-button {
-    -webkit-appearance: button;
     appearance: button;
     font: inherit;
   }
@@ -359,19 +341,19 @@ display:revert; revert to element instead of attribute */
     font:
       11px ui-monospace,
       SFMono-Regular,
-      SF Mono,
+      "SF Mono",
       Menlo,
       Consolas,
-      Liberation Mono,
+      "Liberation Mono",
       monospace;
     line-height: 10px;
     color: #1f2328;
     vertical-align: middle;
     background-color: #f6f8fa;
-    border: solid 1px rgba(175, 184, 193, 0.2);
-    border-bottom-color: rgba(175, 184, 193, 0.2);
+    border: solid 1px rgb(175 184 193 / 20%);
+    border-bottom-color: rgb(175 184 193 / 20%);
     border-radius: 6px;
-    box-shadow: inset 0 -1px 0 rgba(175, 184, 193, 0.2);
+    box-shadow: inset 0 -1px 0 rgb(175 184 193 / 20%);
   }
 
   h1,
@@ -390,7 +372,7 @@ display:revert; revert to element instead of attribute */
     font-weight: 600;
     padding-bottom: 0.3em;
     font-size: 1.5em;
-    border-bottom: 1px solid hsla(210, 18%, 87%, 1);
+    border-bottom: 1px solid hsl(210deg 18% 87% / 100%);
   }
 
   h3 {
@@ -454,10 +436,10 @@ display:revert; revert to element instead of attribute */
     font-family:
       ui-monospace,
       SFMono-Regular,
-      SF Mono,
+      "SF Mono",
       Menlo,
       Consolas,
-      Liberation Mono,
+      "Liberation Mono",
       monospace;
     font-size: 12px;
   }
@@ -468,10 +450,10 @@ display:revert; revert to element instead of attribute */
     font-family:
       ui-monospace,
       SFMono-Regular,
-      SF Mono,
+      "SF Mono",
       Menlo,
       Consolas,
-      Liberation Mono,
+      "Liberation Mono",
       monospace;
     font-size: 12px;
     word-wrap: normal;
@@ -480,7 +462,6 @@ display:revert; revert to element instead of attribute */
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     margin: 0;
-    -webkit-appearance: none;
     appearance: none;
   }
 
@@ -615,8 +596,8 @@ display:revert; revert to element instead of attribute */
   }
 
   table tr {
-    background-color: #ffffff;
-    border-top: 1px solid hsla(210, 18%, 87%, 1);
+    background-color: #fff;
+    border-top: 1px solid hsl(210deg 18% 87% / 100%);
   }
 
   table tr:nth-child(2n) {
@@ -641,7 +622,7 @@ display:revert; revert to element instead of attribute */
     margin: 0;
     font-size: 85%;
     white-space: break-spaces;
-    background-color: rgba(175, 184, 193, 0.2);
+    background-color: rgb(175 184 193 / 20%);
     border-radius: 6px;
   }
 
@@ -688,13 +669,11 @@ display:revert; revert to element instead of attribute */
 @media (prefers-color-scheme: dark) {
   body {
     color-scheme: dark;
-    -ms-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
     margin: 0;
     color: #e6edf3;
     background-color: #0d1117;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Noto Sans',
-      Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
+    font-family: 'Overused Grotesk', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     word-wrap: break-word;
@@ -716,13 +695,12 @@ display:revert; revert to element instead of attribute */
 
   a {
     background-color: transparent;
-    color: currentColor;
+    color: currentcolor;
     text-decoration: none;
   }
 
   abbr[title] {
     border-bottom: none;
-    -webkit-text-decoration: underline dotted;
     text-decoration: underline dotted;
   }
 
@@ -744,7 +722,7 @@ display:revert; revert to element instead of attribute */
   }
 
   mark {
-    background-color: rgba(187, 128, 9, 0.15);
+    background-color: rgb(187 128 9 / 15%);
     color: #e6edf3;
   }
 
@@ -811,7 +789,6 @@ display:revert; revert to element instead of attribute */
   [type='button'],
   [type='reset'],
   [type='submit'] {
-    -webkit-appearance: button;
     appearance: button;
   }
 
@@ -828,17 +805,15 @@ display:revert; revert to element instead of attribute */
 
   [type='search']::-webkit-search-cancel-button,
   [type='search']::-webkit-search-decoration {
-    -webkit-appearance: none;
     appearance: none;
   }
 
-  ::-webkit-input-placeholder {
+  ::input-placeholder {
     color: inherit;
     opacity: 0.54;
   }
 
   ::-webkit-file-upload-button {
-    -webkit-appearance: button;
     appearance: button;
     font: inherit;
   }
@@ -925,19 +900,19 @@ display:revert; revert to element instead of attribute */
     font:
       11px ui-monospace,
       SFMono-Regular,
-      SF Mono,
+      "SF Mono",
       Menlo,
       Consolas,
-      Liberation Mono,
+      "Liberation Mono",
       monospace;
     line-height: 10px;
     color: #e6edf3;
     vertical-align: middle;
     background-color: #161b22;
-    border: solid 1px rgba(110, 118, 129, 0.4);
-    border-bottom-color: rgba(110, 118, 129, 0.4);
+    border: solid 1px rgb(110 118 129 / 40%);
+    border-bottom-color: rgb(110 118 129 / 40%);
     border-radius: 6px;
-    box-shadow: inset 0 -1px 0 rgba(110, 118, 129, 0.4);
+    box-shadow: inset 0 -1px 0 rgb(110 118 129 / 40%);
   }
 
   h1,
@@ -1020,10 +995,10 @@ display:revert; revert to element instead of attribute */
     font-family:
       ui-monospace,
       SFMono-Regular,
-      SF Mono,
+      "SF Mono",
       Menlo,
       Consolas,
-      Liberation Mono,
+      "Liberation Mono",
       monospace;
     font-size: 12px;
   }
@@ -1034,10 +1009,10 @@ display:revert; revert to element instead of attribute */
     font-family:
       ui-monospace,
       SFMono-Regular,
-      SF Mono,
+      "SF Mono",
       Menlo,
       Consolas,
-      Liberation Mono,
+      "Liberation Mono",
       monospace;
     font-size: 12px;
     word-wrap: normal;
@@ -1046,7 +1021,6 @@ display:revert; revert to element instead of attribute */
   input::-webkit-outer-spin-button,
   input::-webkit-inner-spin-button {
     margin: 0;
-    -webkit-appearance: none;
     appearance: none;
   }
 
@@ -1192,7 +1166,7 @@ display:revert; revert to element instead of attribute */
     margin: 0;
     font-size: 85%;
     white-space: break-spaces;
-    background-color: rgba(110, 118, 129, 0.4);
+    background-color: rgb(110 118 129 / 40%);
     border-radius: 6px;
   }
 
