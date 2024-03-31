@@ -7,4 +7,44 @@ description: ''
   The Docs are Under Construction
 </Callout>
 
+### About Rail Fence Cipher
+
+Rail fence cipher is a transposition cipher.
+
+Characters are arranged in a zigzag pattern on the rail of the fence, and finally, characters are concatenated in rails for encryption.
+
+The encryption key is a number of rails.
+
+For example, when "THIS\_IS\_A\_SECRET\_MESSAGE" is encrypted with 4 rails, it is as follows.
+
+1\. Prepare four rails (height 4) and arrange the characters in zigzag from the upper left.
+
+```
+-----------------------------------------------
+T           S           C           E          
+-----------------------------------------------
+  H       I   _       E   R       M   S       E
+-----------------------------------------------
+    I   _       A   S       E   _       S   G  
+-----------------------------------------------
+      S           _           T           A    
+-----------------------------------------------
+```
+
+2\. Get the placed characters in each rail.
+
+```
+TSCE
+HI_ERMSE
+I_ASE_SG
+S_TA
+```
+
+3\. Concatenated the rail characters.
+
+```
+TSCEHI_ERMSEI_ASE_SGS_TA
+```
+
+
 import { Callout } from 'nextra-theme-docs'
