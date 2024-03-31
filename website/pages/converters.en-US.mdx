@@ -1,5 +1,3 @@
-# Hey
-
 This is an inline counter directly created in MDX:
 
 import React from "react"
@@ -8,10 +6,8 @@ import { useTextReverse } from '../hooks/useTextReverse.ts'
 export const initialCounterState = 4;
 
 export const MyCounter = () => {
-  const [counter, setCounter] = React.useState(initialCounterState);
-    const [inputText, setInputText] = React.useState('');
-  const { textReverse, reverseText } = useTextReverse();
-
+  const [counter, setCounter] = React.useState(initialCounterState)
+  
   const handleInputChange = (e) => {
     const text = e.target.value;
     setInputText(text);
@@ -31,4 +27,4 @@ export const MyCounter = () => {
 
 <MyCounter />
 
-That's cool isn't it
+That's cool isn't it../hooks/string/useTextReverse.ts
