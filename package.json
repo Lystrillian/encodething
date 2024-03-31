@@ -1,22 +1,18 @@
 {
-  "name": "million",
-  "version": "3.0.6",
-  "description": "Make React Faster. Automatically.",
+  "name": "Encodething",
+  "version": "0.0.1",
+  "description": "  Encode, decode,  cipher and convert to leverage your web experience. ",
   "keywords": [
   ],
   "homepage": "#",
-  "bugs": {
-    "url": "#"
-  },
   "repository": {
     "type": "git",
-    "url": "#"
+    "url": "https://github.com/Lystrillian/encodething"
   },
   "license": "#",
   "author": {
-    "name": "#",
-    "email": "#",
-    "url": "#"
+    "name": "Lystrillian",
+    "url": "https://github.com/Lystrillian"
   },
   "sideEffects": false,
   "files": [
