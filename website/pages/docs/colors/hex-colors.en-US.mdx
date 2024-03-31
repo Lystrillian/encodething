@@ -1,0 +1,184 @@
+---
+title: 'HEX Colors'   
+description: ''
+---
+
+<Callout type="warning">
+  This section is in an active stage of development.
+</Callout>
+
+Web colors are colors used in displaying web pages on the World Wide Web; they can be described by way of three methods: a color may be specified as an RGB triplet, in hexadecimal format (a hex triplet) or according to its common English name in some cases. A color tool or other graphics software is often used to generate color values. In some uses, hexadecimal color codes are specified with notation using a leading number sign (#). A color is specified according to the intensity of its red, green and blue components, each represented by eight bits. Thus, there are 24 bits used to specify a web color within the sRGB gamut, and 16,777,216 colors that may be so specified.
+
+Colors outside the sRGB gamut can be specified in Cascading Style Sheets by making one or more of the red, green and blue components negative or greater than 100%, so the color space is theoretically an unbounded extrapolation of sRGB similar to scRGB. Specifying a non-sRGB color this way requires the RGB() function call. It is impossible with the hexadecimal syntax (and thus impossible in legacy HTML documents that do not use CSS).
+
+The first versions of Mosaic and Netscape Navigator used the X11 color names as the basis for their color lists, as both started as X Window System applications. Web colors have an unambiguous colorimetric definition, sRGB, which relates the chromaticities of a particular phosphor set, a given transfer curve, adaptive whitepoint, and viewing conditions. These have been chosen to be similar to many real-world monitors and viewing conditions, to allow rendering to be fairly close to the specified values even without color management. User agents vary in the fidelity with which they represent the specified colors. More advanced user agents use color management to provide better color fidelity; this is particularly important for Web-to-print applications.
+
+## Hex Triplet
+
+A hex triplet is a six-digit (or eight-digit), three-byte (or four-byte) hexadecimal number used in HTML, CSS, SVG, and other computing applications to represent colors. The bytes represent the red, green, and blue components of the color. The optional fourth byte refers to alpha channel. One byte represents a number in the range 00 to FF (in hexadecimal notation), or 0 to 255 in decimal notation. This represents the least (0) to the most (255) intensity of each of the color components. Thus web colors specify colors in the 24-bit RGB color scheme. The hex triplet is formed by concatenating three bytes in hexadecimal notation, in the following order:
+
+**Byte 1:** red value (color type red)
+**Byte 2:** green value (color type green)
+**Byte 3:** blue value (color type blue)
+**Byte 4 (optional):** alpha value 
+
+For example, consider the color where the red/green/blue values are decimal numbers: red=36, green=104, blue=160 (a grayish-blue color). The decimal numbers 36, 104, and 160 are equivalent to the hexadecimal numbers 24, 68, and A0 respectively. The hex triplet is obtained by concatenating the six hexadecimal digits together, 2468A0 in this example.
+
+If any one of the three color values is less than 10 hex (16 decimal), it must be represented with a leading zero so that the triplet always has exactly six digits. For example, the decimal triplet 4, 8, 16 would be represented by the hex digits 04, 08, 10, forming the hex triplet 040810.
+
+The number of colors that can be represented by this system is 166 or 2563 or 224 = 16,777,216.
+
+### Shorthand hexademical form
+
+An abbreviated, three (hexadecimal)-digit or four-digit form can be used, but can cause errors if software or maintenance scripts are only expecting the long form. Expanding this form to the six-digit form is as simple as repeating each digit: 09C becomes 0099CC as presented on the following CSS example:
+
+<pre>
+.threedigit color: #09C;  
+.sixdigit   color: #0099CC; /* same color as above */
+</pre>
+
+This shorthand form reduces the palette to 4,096 colors, equivalent of 12-bit color as opposed to 24-bit color using the whole six-digit form (16,777,216 colors). This limitation is sufficient for many text-based documents.
+
+### Converting RGB to Hexademical
+
+RGB values are usually given in the 0–255 range; if they are in the 0–1 range, the values are multiplied by 255 before conversion. This number divided by sixteen (integer division; ignoring any remainder) gives the first hexadecimal digit (between 0 and F, where the letters A to F represent the numbers 10 to 15. See hexadecimal for more details). The remainder gives the second hexadecimal digit. For instance, the RGB value 201 divides into 12 groups of 16, thus the first digit is C. A remainder of nine gives the hexadecimal number C9. This process is repeated for each of the three color values.
+
+Conversion between number bases is a common feature of calculators, including both hand-held models and the software calculators bundled with most modern operating systems. Web-based tools specifically for converting color values are also available.
+
+## HTML Color Names
+
+### Basic colors
+
+The basic colors are 16 colors defined in the [HTML](https://en.wikipedia.org/wiki/HTML "HTML") 4.01 specification, ratified in 1999,<sup id="cite_ref-8" class="reference"><a href="https://en.wikipedia.org/wiki/Web_colors#cite_note-8">[8]</a></sup> as follows (names are defined in this context to be case-insensitive):
+
+CSS 1–2.0, HTML 3.2–4, and VGA color names
+
+|  | **Name** | **[Hex](https://en.wikipedia.org/wiki/Web_colors#Hex_triplet) <br /> (RGB)** | **[Red](https://en.wikipedia.org/wiki/RGB_color_model) <br /> (RGB)** | **[Green](https://en.wikipedia.org/wiki/RGB_color_model) <br /> (RGB)** | **[Blue](https://en.wikipedia.org/wiki/RGB_color_model) <br /> (RGB)** | **[Hue](https://en.wikipedia.org/wiki/HSL_and_HSV#Hue_and_chroma) <br /> (HSL/HSV)** |**[Satur.](https://en.wikipedia.org/wiki/HSL_and_HSV#Saturation) <br /> (HSL)** | **[Light](https://en.wikipedia.org/wiki/HSL_and_HSV#Lightness) <br /> (HSL)** | **[Satur.](https://en.wikipedia.org/wiki/HSL_and_HSV#Saturation) <br/> (HSV)** | **V[alue](https://en.wikipedia.org/wiki/HSL_and_HSV#Lightness) <br />** (HSV) | **[CGA number](https://en.wikipedia.org/wiki/List_of_8-bit_computer_hardware_graphics#CGA) <br /> (name); alias** |   
+|:----:|:--------:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|:----:|
+| <div style={{padding: '20px', backgroundColor: '#FFFFFF	'}}></div> | White | #FFFFFF | 100% | 100%	| 100%	| 0°	| 0%	| 100%	| 0%	| 100%	| 15 (white) |   
+| <div style={{padding: '20px', backgroundColor: '#C0C0C0'}}></div> | Silver | #C0C0C0 | 75%	| 75%	| 75%	| 0°	| 0%	| 75%	| 0%	| 75%	|07 (light gray) |  
+| <div style={{padding: '20px', backgroundColor: '#808080'}}></div> | Gray | #808080 | 50%	| 50%	| 50%	| 0°	| 0%	| 50%	| 0%	| 50%	| 08 (dark gray) |   
+| <div style={{padding: '20px', backgroundColor: '#000000'}}></div> | Black | #000000| 0%	| 0%	| 0%	| 0°	| 0%	| 0%	| 0%	| 0%	| 00 (black) | 
+| <div style={{padding: '20px', backgroundColor: '#FF0000'}}></div> | Red | #FF0000 | 100%	| 0%	| 0%	| 0°	| 100%	| 50%	| 100%	| 100% | 12 (high red) |  
+| <div style={{padding: '20px', backgroundColor: '#800000'}}></div> | Maroon | #800000| 50%	| 0%	| 0%	| 0°	| 100%	| 25%	| 100%	| 50% |04 (low red)|
+| <div style={{padding: '20px', backgroundColor: '#FFFF00'}}></div> | Yellow | #FFFF00 | 100%	| 100%	| 0%	| 60°	| 100%	| 50%	| 100%	| 100% | 14 (yellow) |  
+| <div style={{padding: '20px', backgroundColor: '#808000'}}></div> | Olive | #808000 | 50%	| 50%	| 0%	| 60°	| 100%	| 25%	| 100%	| 50% | 06 (brown) |
+| <div style={{padding: '20px', backgroundColor: '#00FF00'}}></div> | Lime | #00FF00 | 0%	| 100%	| 0%	| 120°	| 100%	| 50%	| 100%	| 100% | 10 (high green); green | 
+| <div style={{padding: '20px', backgroundColor: '#008000'}}></div> | Green | #008000 | 0%	| 50%	| 0%	| 120°	| 100%	| 25%	| 100%	| 50% | 02 (low green) |  
+| <div style={{padding: '20px', backgroundColor: '#00FFFF'}}></div> | Aqua | #00FFFF | 0%	| 100%	| 100%	| 180°	| 100%	| 50%	| 100%	| 100% | 11 (high cyan); cyan |   
+| <div style={{padding: '20px', backgroundColor: '#008080'}}></div> | Teal | #008080 | 0%	| 50%	| 50%	| 180°	| 100%	| 25%	| 100%	| 50% | 03 (low cyan) |  
+| <div style={{padding: '20px', backgroundColor: '#0000FF'}}></div> | Blue | #0000FF | 0%	| 0%	| 100%	| 240°	| 100%	| 25%	| 100%	| 100% | 09 (high blue)|
+| <div style={{padding: '20px', backgroundColor: '#000080'}}></div> | Navy | #000080 | 0%	| 0% | 50%	| 240°	| 100%	| 25%	| 100%	| 50%	|	01 (low blue) |
+| <div style={{padding: '20px', backgroundColor: '#FF00FF'}}></div> | Fuchsia | #FF00FF | 100%	| 0%	| 100%	| 300°	| 100%	| 50%	| 100%	| 100%	| 13 (high magenta); magenta |   
+| <div style={{padding: '20px', backgroundColor: '#800080'}}></div> | Purple | #800080 | 50%	| 0%	| 50%	| 300°	| 100%	| 25%	| 100%	| 50%	| 05 (low magenta) | 
+
+These 16 were labelled as sRGB and included in the HTML 3.0 specification, which noted they were "the standard 16 colors supported with the Windows [VGA](https://en.wikipedia.org/wiki/Video_Graphics_Array "Video Graphics Array") palette.
+
+### Extended Colors
+
+Extended colors are the result of merging specifications from HTML 4.01, CSS 2.0, SVG 1.0 and CSS3 User Interfaces (CSS3 UI).
+
+Several colors are defined by web browsers. A particular browser may not recognize all of these colors, but as of 2005, all modern, general-use, graphical browsers support the full list of colors. Many of these colors are from the list of X11 color names distributed with the X Window System. These colors were standardized by SVG 1.0, and are accepted by SVG Full user agents. They are not part of SVG Tiny.
+
+The list of colors shipped with the X11 product varies between implementations and clashes with certain of the HTML names such as green. X11 colors are defined as simple RGB (hence, no particular color space), rather than sRGB. This means that the list of colors found in X11 (e.g., in /usr/lib/X11/rgb.txt) should not directly be used to choose colors for the web.
+
+![SVG1.1 named colors with sRGB hex/dec and HSL codes](https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/SVG1.1_Color_Swatch.svg/1920px-SVG1.1_Color_Swatch.svg.png)
+
+The list of web "X11 colors" from the CSS3 specification, along with their hexadecimal and decimal equivalents, is shown below. Compare the alphabetical lists in the W3C standards. This includes the common synonyms: aqua (HTML4/CSS 1.0 standard name) and cyan (common sRGB name), fuchsia (HTML4/CSS 1.0 standard name) and magenta (common sRGB name), gray (HTML4/CSS 1.0 standard name) and grey.
+
+## CSS Colors
+
+The Cascading Style Sheets specification defines the same number of named colors as the HTML 4 spec, namely the 16 HTML colors, and 124 colors from the Netscape X11 color list for a total of 140 names that were recognized by Internet Explorer (IE) 3.0 and Netscape Navigator 3.0. Blooberry.com notes that Opera 2.1 and Safari 1 also included Netscape's expanded list of 140 color names, but later discovered 14 names not included with Opera 3.5 on Windows 98.
+
+In CSS 2.1, the color 'orange' (one of the 140) was added to the section with the 16 HTML4 colors as a 17th color. The CSS3.0 specification did not include orange in the "HTML4 color keywords" section, which was renamed as "Basic color keywords". In the same reference, the "SVG color keywords" section, was renamed "Extended color keywords", after starting out as "X11 color keywords" in an earlier working draft. The working draft for the level 4 color module combines the Basic and Extended sections together in a simple "Named Colors" section.
+
+Color added in CSS 2.1
+
+|   | **Name** | Hex <br /> (RGB) | Red <br /> (RGB) | Green <br /> (RGB) | Blue <br /> (RGB) | Hue <br /> (HSL) | Satur. <br /> (HSL) | Light <br /> (HSL) | Satur. <br /> (HSV) | Value <br /> (HSV) | Allias |  
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| <div style={{padding: '20px', backgroundColor: '#FFA500'}}></div>| Orange | 100%	| 65%	| 0%	| 39°	| 100%	| 50%	| 100%	| 100%	| 100% |   | 
+
+CSS 2, SVG and CSS 2.1 allow web authors to use system colors, which are color names whose values are taken from the operating system, picking the operating system's highlighted text color, or the background color for tooltip controls. This enables web authors to style their content in line with the operating system of the user agent. The CSS3 color module has deprecated the use of system colors in favor of CSS3 UI System Appearance property, which itself was subsequently dropped from CSS3.
+
+Example system color keywords
+
+| **Appearance** | **Keyword** |
+|------|------|
+|<div style={{padding: '20px', backgroundColor: 'rgb(0, 0, 238)'}}></div> |linkText |
+| <div style={{padding: '20px', backgroundColor: 'rgb(85, 26, 139)'}}></div> | visitedText |
+| <div style={{padding: '20px', backgroundColor: 'rgb(255, 0, 0)'}}></div> | activeText|
+| <div style={{padding: '20px', backgroundColor: 'rgba(51, 181, 229, 0.4)'}}></div> | highlight |
+| <div style={{padding: '20px', backgroundColor: 'rgb(255, 255, 0)'}}></div> | mark |  
+
+The CSS3 specification also introduces HSL color space values to style sheets:
+
+<pre>
+/* RGB model */
+color: #F00 /* #rgb */ 
+color: #FF0000 /* #rrggbb */
+color: rgb(255, 0, 0) /* integer range 0 - 255 */
+color: rgb(100%, 0%, 0%) /* float range 0.0% - 100.0% */
+
+/* RGB with alpha channel, added to CSS3 */
+color: rgba(255, 0, 0, 0.5) /* 0.5 opacity, semi-transparent */
+
+/* HSL model, added to CSS3 */
+color: hsl(0, 100%, 50%) /* red */
+color: hsl(120, 100%, 50%) /* green */
+color: hsl(120, 100%, 25%) /* dark green */
+color: hsl(120, 100%, 75%) /* light green */
+color: hsl(120, 50%, 50%) /* pastel green */
+
+/* HSL model with alpha channel */
+color: hsla(120, 100%, 50%, 1) /* green */
+color: hsla(120, 100%, 50%, 0.5) /* semi-transparent green */
+color: hsla(120, 100%, 50%, 0.1) /* very transparent green */
+</pre>
+
+CSS also supports the special color transparent, which represents an alpha value of zero; by default, transparent is rendered as an invisible nominal black: `rgba(0, 0, 0, 0)`. It was introduced in CSS1 but its scope of use has expanded over the versions.
+
+### CSS Color 4
+
+Level 4 of the CSS Color specification introduced several new CSS color formats.
+
+Besides new ways to write colors, it also introduces the concept of mixing colors in a non-sRGB color space, a first step towards fixing a well-known issue in color gradients. Some sections explaining color theory and common operations like gamut mapping are also added to aid implementation.
+
+#### Device independent color
+
+CSS Color 4 introduces several different formats for device independent color that can display the entirety of visible color (in a capable screen), including:
+
+- Lab and LCH
+
+- OKLab and OKLCH (preferred over Lab/LCH)
+
+- XYZ (D50 or D65[default])
+
+#### Predefined color spaces
+
+A number of RGB spaces with gamuts that are wider than sRGB are also introduced through the new color() function:
+
+- Display P3
+
+- Prophoto
+
+- REC.2020
+
+- Adobe 1998 RGB
+
+A linearized variant of sRGB is also defined for color mixing.
+
+## Accessibility
+
+### Color Selection
+
+Some browsers and devices do not support colors. For these displays or blind and colorblind users, Web content depending on colors can be unusable or difficult to use.
+
+Either no colors should be specified (to invoke the browser's default colors), or both the background and all foreground colors (such as the colors of plain text, unvisited links, hovered links, active links, and visited links) should be specified to avoid black on black or white on white effects.
+
+### Color contrast
+
+The Web Content Accessibility Guidelines recommend a contrast ratio of at least 4.5:1 between the relative luminance of text and its background color or at least 3:1 for large text. Enhanced accessibility requires contrast ratios greater than 7:1.
+
+However, addressing accessibility concerns is not simply a matter of increasing the contrast ratio. As a report to the Web Accessibility Initiative indicates, dyslexic readers are better served by contrast ratios below the maximum. The recommendations they refer to of off-black (#0A0A0A) on off-white (#FFFFE5) and black (#000000) on creme (#FAFAC8) have contrast ratios of 11.7:1 and 20.3:1 respectively. Among their other color pairs, brown (#282800) on dark green (#A0A000) has a contrast ratio of 3.24:1, which is less than the WCAG recommendation, dark brown (#1E1E00) on light green (#B9B900) has a contrast ratio of 4.54:1 and blue (#00007D) on yellow (#FFFF00) has a contrast ratio of 11.4:1. The colors named in the report use different color values than the web colors of the same name.
+
+import { Callout } from 'nextra-theme-docs'

@@ -1,0 +1,9 @@
+{
+  "introduction": "Introduction",
+  "string": "Strings",
+  "number": "Numbers",
+  "date": "Date",
+  "colors": "Colors",
+  "ciphers": "Ciphers",
+  "hash": "Hash"
+}

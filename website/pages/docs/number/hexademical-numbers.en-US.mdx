@@ -1,0 +1,149 @@
+---
+title: 'Hexadecimal Numbers'
+description: 'Learn how to use Encodething for Hexadecimal Numbers conversions'
+---
+
+# Hexadecimal Numbers
+
+Hexadecimal Number System has a base of sixteen and uses the numbers from 0 to 9 and the letters A to F to represent values from 10 to 15. Hexadecimal numbers are commonly used in computer programming and digital systems because they provide a compact representation of binary data.
+
+## Definition
+
+A number system which has its base as 'sixteen' is called a Hexadecimal number system. It uses numbers from 0 to 9 and letters A to F to represent values from 10 to 15. Let us take an example to understand the concept. As we said, any number with base 16 is a hexadecimal number like 2F, 10B, 5E, etc.
+
+Like Hexadecimal number is represented with base 16, in the same way, a binary number is represented with base 2, a decimal number with base 10, and an octal number is represented with base 8.
+
+Examples of these number systems are:
+
+22<sub>2</sub> is a binary number
+100<sub>10</sub> is a decimal number
+125<sub>8</sub> is an octal number
+
+If we solve a hexadecimal number, each place is a power of sixteen.
+
+1A4<sub>16</sub> = 1 × 16<sup>2</sup> + 10 × 16<sup>1</sup> + 4 × 16<sup>0</sup>
+
+## Hexadecimal Numbers System Table
+
+We use 4 bits to represent Hexadecimal Numbers. Each group will have a distinct value between 0000 and 1111.
+
+| Hexadecimal Digital Value | Binary Equivalent |
+| ----------- | ----------- |
+| 0      | 0000       |
+| 1   | 0001        |
+| 2   | 0010        |
+| 3      | 0011       |
+| 4   | 0100        |
+| 5      | 0101       |
+| 6   | 0110        |
+| 7      | 0111       |
+| 8   | 1000        |
+| 9      | 1001       |
+| A   | 1010        |
+| B      | 1011       |
+| C   | 1100        |
+| D      | 1101       |
+| E   | 1110        |
+| F      | 1111       |
+
+Note: Hexadecimal number system supports digits from 0 to 9 and letters A to F. Beyond F, such as G and H are not hexadecimal digits. For example, 1G is not a hexadecimal number.
+
+## Decimal to Hexadecimal Number
+
+To convert decimal to hexadecimal numbers, the decimal number is divided by 16 each time, it yields or gives a remainder. The first remainder we get is the least significant digit (LSD) and the last remainder is the most significant digit (MSD). Let us understand the conversion with the help of an example.
+
+### Example on Decimal to Hexadecimal
+
+**Problem:** Suppose 560 is a decimal number, convert it into a hexadecimal number.
+
+**Solution:** If 560 is a decimal number, then,
+
+560/16 = 35 and the remainder is 0
+
+35/16 = 2 and the remainder is 3
+
+And 2/16 = 0 and the remainder is 2
+
+So the hexadecimal number starts from MSD to LSD, i.e. 230
+
+Therefore, 560<sub>10</sub> = 230<sub>16</sub>
+
+**Problem:** Convert 0.52 into a hexadecimal number.
+
+**Solution:** The fraction part of the decimal number has to be multiplied by 16.
+
+0.52 × 16 = 0.32 with carry 8
+
+0.32 × 16 = 0.12 with carry 5
+
+0.12 × 16 = 0.92 with carry 1
+
+So, for the fractional hexadecimal number, we read the generated carry from up to down.
+
+Therefore, 0.52<sub>10</sub>
+
+Therefore, 0.52<sub>10</sub> = 0.851<sub>16</sub>
+
+## Hexadecimal to Decimal
+
+To convert a hexadecimal number to a decimal number we need to multiply each digit of the given hexadecimal with the reducing power of 16. 
+
+Let us learn here, the conversion of Hexadecimal number to Decimal Number or base 16 to base 10.
+
+### Examples on Hexadecimal to Decimal
+
+**Example 1:** Suppose 2F5<sub>16</sub> is a hexadecimal number, then its decimal form will be,
+
+2F5<sub>16</sub> = 2 × 16<sup>2</sup> + 15 × 16<sup>1</sup> + 5 × 16<sup>0</sup>
+
+          = 2 × 256 + 15 × 16 + 5 × 1 = 512 + 240 + 5
+
+          =  757<sub>10</sub>
+
+**Example 2:** Let 1B5 is a hexadecimal number denoted by 1B5<sub>16</sub>. Find the decimal number.
+
+1B5<sub>16</sub> = 1 × 16<sup>2</sup> + 11 × 16<sup>1</sup> + 5 × 16<sup>0</sup>
+
+          = 1 × 256 + 11 × 16 + 5 × 1 = 256 + 176 + 5
+
+          = 437<sub>10</sub>
+
+## Hexadecimal to Binary
+
+To convert a hexadecimal number to a binary number, each hexadecimal digit is converted to its 4-bit binary equivalent. The resulting binary numbers are then concatenated to form the final binary number.
+
+### Example on Hexadecimal to Binary
+
+**Problem:** Convert the hexadecimal number 3D5<sub>16</sub> to binary.
+
+**Solution:** 
+3<sub>16</sub> = 0011<sub>2</sub>
+D<sub>16</sub> = 1101<sub>2</sub>
+5<sub>16</sub> = 0101<sub>2</sub>
+
+Therefore, 3D5<sub>16</sub> = 001111010101<sub>2</sub>
+
+## Binary to Hexadecimal
+
+To convert a binary number to a hexadecimal number, the binary digits are grouped into sets of four from right to left. If the leftmost group has fewer than four digits, it is padded with leading zeros. Each group of four binary digits is then converted to its hexadecimal equivalent.
+
+### Example on Binary to Hexadecimal
+
+**Problem:** Convert the binary number 1011010112 to hexadecimal.
+
+**Solution:** Group the binary digits in sets of four from right to left:
+10|1101|0112
+
+Pad the leftmost group with leading zeros:
+0010|1101|0112
+
+Convert each group to its hexadecimal equivalent:
+0010<sub>2</sub> = 2<sub>16</sub>
+1101<sub>2</sub> = D<sub>16</sub>
+0111<sub>2</sub> = 7<sub>16</sub>
+
+Therefore, 101101011<sub>2</sub> = 2D7<sub>16</sub>
+
+## Conclusion
+
+In summary, the hexadecimal number system is a base-16 system that uses digits from 0 to 9 and letters A to F. Hexadecimal numbers can be converted to and from decimal, binary, and other number systems using the methods described above. Understanding hexadecimal numbers is crucial in various fields, such as computer science, digital electronics, and web design, where they are used for representing colors, memory addresses, and other data efficiently. By mastering the concepts and conversion techniques presented in this article, you will be well-equipped to work with hexadecimal numbers in various contexts.

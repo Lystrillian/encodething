@@ -1,0 +1,148 @@
+---
+title: 'Binary Numbers'
+description: 'Learn how to use Encodething for Binary Numbers conversions'
+---
+
+# Binary Numbers
+
+Binary Number System has a base of two and uses only the numbers 0 and 1. Binary numbers are the foundation of all digital systems, including computers, as they represent the two states of electronic switches: on (1) and off (0). Understanding binary numbers is essential for anyone working with digital systems or computer programming.
+
+## Definition
+
+A number system which has its base as 'two' is called a Binary number system. It uses only two digits: 0 and 1. Let us take an example to understand the concept. As we said, any number with base 2 is a binary number like 1001, 1011, 1110, etc.
+
+Like Binary number is represented with base 2, in the same way, a decimal number is represented with base 10, an octal number with base 8, and a hexadecimal number is represented with base 16.
+
+Examples of these number systems are:
+
+100<sub>10</sub> is a decimal number
+125<sub>8</sub> is an octal number
+2F<sub>16</sub> is a hexadecimal number
+
+If we solve a binary number, each place is a power of two.
+
+1101<sub>2</sub> = 1 × 2<sup>3</sup> + 1 × 2<sup>2</sup> + 0 × 2<sup>1</sup> + 1 × 2<sup>0</sup>
+
+## Binary Numbers System Table
+
+Each binary digit (bit) represents a power of two.
+
+| Binary Digit | Decimal Value |
+| ----------- | ----------- |
+| 0      | 0       |
+| 1   | 1        |
+| 10   | 2        |
+| 11      | 3       |
+| 100   | 4        |
+| 101      | 5       |
+| 110   | 6        |
+| 111      | 7       |
+| 1000   | 8        |
+| 1001      | 9       |
+| 1010   | 10        |
+
+Note: Binary number system supports only digits 0 and 1. Any other digit, such as 2 or 3, is not a valid binary digit. For example, 1012 is not a binary number.
+
+## Decimal to Binary Number
+
+To convert decimal to binary numbers, the decimal number is divided by 2 each time, and the remainder is recorded. The first remainder we get is the least significant bit (LSB) and the last remainder is the most significant bit (MSB). Let us understand the conversion with the help of an example.
+
+### Example on Decimal to Binary
+
+**Problem:** Suppose 25 is a decimal number, convert it into a binary number.
+
+**Solution:** If 25 is a decimal number, then,
+
+25/2 = 12 and the remainder is 1
+
+12/2 = 6 and the remainder is 0
+
+6/2 = 3 and the remainder is 0
+
+3/2 = 1 and the remainder is 1
+
+And 1/2 = 0 and the remainder is 1
+
+So the binary number starts from MSB to LSB, i.e. 11001
+
+Therefore, 25<sub>10</sub> = 11001<sub>2</sub>
+
+**Problem:** Convert 0.625 into a binary number.
+
+**Solution:** The fraction part of the decimal number has to be multiplied by 2.
+
+0.625 × 2 = 1.25 with carry 1
+
+0.25 × 2 = 0.5 with carry 0
+
+0.5 × 2 = 1.0 with carry 1
+
+So, for the fractional binary number, we read the generated carry from up to down.
+
+Therefore, 0.625<sub>10</sub> = 0.101<sub>2</sub>
+
+## Binary to Decimal
+
+To convert a binary number to a decimal number, we need to multiply each digit of the given binary with the increasing power of 2. 
+
+Let us learn here, the conversion of Binary number to Decimal Number or base 2 to base 10.
+
+### Examples on Binary to Decimal
+
+**Example 1:** Suppose 1101<sub>2</sub> is a binary number, then its decimal form will be,
+
+1101<sub>2</sub> = 1 × 2<sup>3</sup> + 1 × 2<sup>2</sup> + 0 × 2<sup>1</sup> + 1 × 2<sup>0</sup>
+
+          = 1 × 8 + 1 × 4 + 0 × 2 + 1 × 1 = 8 + 4 + 0 + 1
+
+          =  13<sub>10</sub>
+
+**Example 2:** Let 10101 is a binary number denoted by 10101<sub>2</sub>. Find the decimal number.
+
+10101<sub>2</sub> = 1 × 2<sup>4</sup> + 0 × 2<sup>3</sup> + 1 × 2<sup>2</sup> + 0 × 2<sup>1</sup> + 1 × 2<sup>0</sup>
+
+          = 1 × 16 + 0 × 8 + 1 × 4 + 0 × 2 + 1 × 1 = 16 + 0 + 4 + 0 + 1
+
+          = 21<sub>10</sub>
+
+## Binary to Octal
+
+To convert a binary number to an octal number, the binary digits are grouped into sets of three from right to left. If the leftmost group has fewer than three digits, it is padded with leading zeros. Each group of three binary digits is then converted to its octal equivalent.
+
+### Example on Binary to Octal
+
+**Problem:** Convert the binary number 101101<sub>2</sub> to octal.
+
+**Solution:** Group the binary digits in sets of three from right to left:
+101|101<sub>2</sub>
+
+Convert each group to its octal equivalent:
+101<sub>2</sub> = 5<sub>8</sub>
+101<sub>2</sub> = 5<sub>8</sub>
+
+Therefore, 101101<sub>2</sub> = 55<sub>8</sub>
+
+## Binary to Hexadecimal
+
+To convert a binary number to a hexadecimal number, the binary digits are grouped into sets of four from right to left. If the leftmost group has fewer than four digits, it is padded with leading zeros. Each group of four binary digits is then converted to its hexadecimal equivalent.
+
+### Example on Binary to Hexadecimal
+
+**Problem:** Convert the binary number 101101011<sub>2</sub> to hexadecimal.
+
+**Solution:** Group the binary digits in sets of four from right to left:
+1|0110|1011<sub>2</sub>
+
+Pad the leftmost group with leading zeros:
+0001|0110|1011<sub>2</sub>
+
+Convert each group to its hexadecimal equivalent:
+0001<sub>2</sub> = 1<sub>16</sub>
+0110<sub>2</sub> = 6<sub>16</sub>
+1011<sub>2</sub> = B<sub>16</sub>
+
+Therefore, 101101011<sub>2</sub> = 16B<sub>16</sub>
+
+## Conclusion
+
+In summary, the binary number system is a base-2 system that uses only digits 0 and 1. Binary numbers are the foundation of all digital systems and can be converted to and from decimal, octal, hexadecimal, and other number systems using the methods described above. Understanding binary numbers is crucial for anyone working with digital systems, computer programming, or digital electronics. By mastering the concepts and conversion techniques presented in this article, you will be well-equipped to work with binary numbers in various contexts and understand how digital systems process and store information.

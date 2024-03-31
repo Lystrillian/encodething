@@ -1,0 +1,10 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+pre {
+  background-color: #0a0a0a;
+  padding: 12px;
+  box-shadow: 0px 0px 0px 1px #ffffff14;
+  margin-top: 0.75rem;
+}
