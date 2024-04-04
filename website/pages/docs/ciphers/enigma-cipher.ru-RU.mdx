@@ -139,7 +139,7 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ  : II
 ABCDEFGHIJKLMNOPQRSTUVWXYZ  : UKW-A
 ```
 
-The Enigma machine has a feature that if you encrypt an encrypted text again with the same settings, you will get the plain text before encryption. Therefore, inputting the encrypted "L" in the above example will yield the original "S".
+Машина "Энигма" имеет свойство: если вы снова зашифруете зашифрованный текст с теми же настройками, вы получите открытый текст до шифрования. Поэтому, введя зашифрованное "L" в приведенном выше примере, вы получите оригинальное "S".
 
 ```
 L -&gt; L  : Plugboard
@@ -174,46 +174,43 @@ ABCDEFGHIJKLMNOPQRSTUVWXYZ  : UKW-A
 
 ### Wheel order (Walzenlage)
 
-Set the type of reflector and rotor, and the order of the rotors.
+Установите тип отражателя и ротора, а также порядок расположения роторов.
 
-Since the input is from the right side of the Enigma machine, the rotors are counted from the right rotor as 1, 2, 3, and so on, but when describing the wheel order settings, they are generally written in order from left to right. For example, a wheel order of "UKW-A II I III" indicates the settings of rotor 1 "III", rotor 2 "I", rotor 3 "II", and the reflector "UKW-A".
+Поскольку вход осуществляется с правой стороны машины Enigma, роторы отсчитываются от правого ротора как 1, 2, 3 и так далее, но при описании настроек порядка колес они обычно записываются в порядке слева направо. Например, порядок колес "UKW-A II I III" указывает на настройки ротора 1 "III", ротора 2 "I", ротора 3 "II" и отражателя "UKW-A".
 
-Normally, there is one reflector and three rotors for a total of four, but the Enigma M4 can be configured with a "thin reflector" and a "thin rotor" in the reflector slot. In Encodething, the "thin reflector" is treated like a normal reflector, and the "thin rotor" (Beta, Gamma) is additionally displayed as rotor 4, for a total of 5 settings. However, if the reflector is UKW-D, Rotor 4 cannot be set because it occupies the reflector slot.
+Обычно используется один рефлектор и три ротора, итого четыре, но Enigma M4 может быть сконфигурирована с "тонким рефлектором" и "тонким ротором" в слоте рефлектора. В Encodething "тонкий отражатель" рассматривается как обычный отражатель, а "тонкий ротор" (Beta, Gamma) дополнительно отображается как ротор 4, итого 5 настроек. Однако, если рефлектор UKW-D, ротор 4 не может быть установлен, поскольку он занимает слот рефлектора.
 
-### Ring setting (Ringstellung)
+### Установка кольца (Ringstellung)
 
-Set the ring of the rotor. This setting changes the position of the rotor's internal wiring relative to the ring. On some Enigma machines, the reflector can also be set to ring.
+астройка кольца ротора. Эта настройка изменяет положение внутренней проводки ротора относительно кольца. На некоторых машинах Enigma рефлектор также может быть настроен на кольцо.
+ 
+### Установка положения (Grundstellung)
 
-### Position setting (Grundstellung)
+Установка начального положения ротора. На некоторых машинах Enigma отражатель также может быть установлен в начальное положение.
+Иногда его называют "ключом сообщений", поскольку для каждого сообщения он устанавливался по-разному.
+ 
 
-Set the initial position of the rotor. On some Enigma machines, the reflector can also be set to its initial position.
+### Подключение штекерной платы (Steckerverbindungen)
 
-It is sometimes called the "Message key" because it was set differently for each message.
-
-### Plugboard wiring (Steckerverbindungen)
-
-Set up the wiring pairs for the plugboard.
-
-In Encodething, wiring is specified by enumerating pairs of two characters to be converted, such as "AB CD EF GH IJ KL", separated by a space. In this example, the pairs are "A" and "B", "C" and "D", and so on.
-
+Задайте пары проводов для плагина.
+В Encodething проводка задается путем перечисления пар из двух символов, которые необходимо преобразовать, например "AB CD EF GH IJ KL", разделенных пробелом. В данном примере это пары "A" и "B", "C" и "D" и так далее.
+ 
 ### Uhr
+Uhr - это аксессуар, который подключается к плагину и выбирает проводку из 40 способов от "00" до "39". Плата и Uhr соединены 20 кабелями. Когда Uhr установлен на "00", эта пара кабелей равна той, что подключена непосредственно к плагину.
+Ур может быть установлен только для Enigma I. Ур можно установить, предварительно указав 10 наборов пар проводов на плате.
 
-Uhr is an accessory that connects to a plugboard and selects wiring from 40 ways from "00" to "39". The plugboard and Uhr are connected by 20 cables. When the Uhr is set to "00", that pair of cables is equal to the one wired directly on the plugboard.
+### Проводка UKW-D
 
-Uhr can only be set for Enigma I. Uhr can be set by first specifying 10 sets of wiring pairs on the plugboard.
+UKW-D - это рефлектор с изменяемой внутренней проводкой.
 
-### UKW-D wiring
-
-UKW-D is a reflector with changeable internal wiring.
-
-The normal notation for reflector rings is "ABCDEFGHIJKLMNOPQRSTUVWXYZ", but UKW-D's notation is in a special order, "A-ZXWVUTSRQPON-MLKIHGFEDCB". The two "-" (BO in normal notation) in the notation are fixed and always wired to each other and cannot be changed. The other 24 characters and 12 pairs of wires are set.
+Обычная нотация для колец рефлектора - "ABCDEFGHIJKLMNOPQRSTUVWXYZ", но нотация UKW-D выполнена в специальном порядке - "A-ZXWVUTSRQPON-MLKIHGFEDCB". Два "-" (BO в обычной нотации) в этой нотации фиксированы, всегда соединены друг с другом и не могут быть изменены. Остальные 24 символа и 12 пар проводов заданы.
 
 ```
-UKW-D notation : A-ZXWVUTSRQPON-MLKIHGFEDCB
-Normal notation: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Нотация UKW-D: A-ZXWVUTSRQPON-MLKIHGFEDCB
+Обычная нотация: ABCDEFGHIJKLMNOPQRSTUVWXYZ
 ```
 
-UKW-D can be set for Enigma I, Enigma M4, and Enigma KD.
+UKW-D может быть установлен для Enigma I, Enigma M4 и Enigma KD.
 
 
 import { Callout } from 'nextra-theme-docs'
