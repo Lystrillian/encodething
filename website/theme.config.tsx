@@ -205,7 +205,7 @@ const config: DocsThemeConfig = {
   },
   i18n: [
     { locale: 'en-US', text: 'English' },
-    { locale: 'ru-RU', text: 'Russian' },
+    { locale: 'ru-RU', text: 'Русский' },
   ],
   useNextSeoProps() {
     const { asPath, pathname, query } = useRouter();
