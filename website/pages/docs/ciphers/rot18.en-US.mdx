@@ -1,34 +1,34 @@
 ---
-title: 'ROT18 Cipher'
-description: 'Learn how to use Encodething for ROT18 Cipher encryption and decryption'
-keywords: ['ROT18 Cipher', 'ROT18', 'Cipher', 'Encryption', 'Decryption', 'Encodething']
+название: 'ROT18 Cipher'
+description: 'Узнайте, как использовать Encodething для шифрования и дешифрования ROT18 Cipher'
+keywords: ['ROT18 Cipher', 'ROT18', 'Cipher', 'Encryption', 'Decryption', 'Encodething'].
 author: 'Lystrillian'
-created: 2024-03-31T16:31:12 (UTC +03:00)
-updated: 2024-03-31T16:31:14 (UTC +03:00)
+создано: 2024-03-31T16:31:12 (UTC+03:00)
+обновлено: 2024-03-31T16:31:14 (UTC+03:00)
 ---
 
 <Callout type="warning">
-  The Docs are Under Construction
+  Документы находятся на стадии разработки
 </Callout>
 
-## About ROT18
+## О ROT18
 
-ROT18 is one of the single transliteration ciphers that encrypts by replacing the characters in the text with other characters.
+ROT18 - один из единственных транслитерационных шифров, который шифрует путем замены символов в тексте на другие символы.
 
-Character replacement is performed by shifting the characters from "A" to "Z" by 13 characters out of the 26 characters of "ABCDEFGHIJKLMNOPQRSTUVWXYZ". Also, the numbers "0" to "9" are shifted by 5 characters out of the 10 characters of "0123456789".
+Замена символов осуществляется путем сдвига символов от "A" до "Z" на 13 символов из 26 символов "ABCDEFGHIJKLMNOPQRSTUVWXYZ". Кроме того, цифры от "0" до "9" сдвигаются на 5 символов из 10 символов "0123456789".
 
-For example, "A" is encrypted to "N" and "0" is encrypted to "5".
-
-```
-Plain : ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
-Cipher: NOPQRSTUVWXYZABCDEFGHIJKLM5678901234
-```
+Например, "A" зашифровано в "N", а "0" - в "5".
 
 ```
-Plain text : THIS IS A SECRET MESSAGE 123
-Cipher text: GUVF VF N FRPERG ZRFFNTR 567
+Открытое : ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+Шифр: NOPQRSTUVWXYZABCDEFGHIJKLM5678901234
 ```
 
-Since there is reciprocity that plaintext can be obtained by encrypting ciphertext again, decryption can be done in the same flow as encryption.
+```
+Открытый текст: ЭТО СЕКРЕТНОЕ СООБЩЕНИЕ 123
+Шифрованный текст: GUVF VF N FRPERG ZRFFNTR 567
+```
+
+Поскольку существует взаимность, что открытый текст может быть получен путем повторного шифрования шифротекста, дешифрование может быть выполнено в том же потоке, что и шифрование.
 
 import { Callout } from 'nextra-theme-docs'
