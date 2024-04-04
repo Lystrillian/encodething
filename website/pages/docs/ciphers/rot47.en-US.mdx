@@ -1,32 +1,34 @@
 ---
-title: 'ROT47 Cipher' 
-description: 'Learn how to use Encodething for ROT47 Cipher encryption and decryption'
-keywords: ['ROT47 Cipher', 'ROT47', 'Cipher', 'Encryption', 'Decryption', 'Encodething']
+title: 'ROT18 Cipher'
+description: 'Learn how to use Encodething for ROT18 Cipher encryption and decryption'
+keywords: ['ROT18 Cipher', 'ROT18', 'Cipher', 'Encryption', 'Decryption', 'Encodething']
+author: 'Lystrillian'
+created: 2024-03-31T16:31:12 (UTC +03:00)
+updated: 2024-03-31T16:31:14 (UTC +03:00)
 ---
 
 <Callout type="warning">
   The Docs are Under Construction
 </Callout>
 
-## About ROT47
+## About ROT18
 
-ROT47 is one of the single transliteration ciphers that encrypts by replacing the characters in the text with other characters.
+ROT18 is one of the single transliteration ciphers that encrypts by replacing the characters in the text with other characters.
 
-Character replacement is performed by shifting the characters from "!" to "\~" by 47 characters out of the 94 characters of `!#$%&'()*+,-./0123456789:;<=>?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_abcdefghijklmnopqrstuvwxyz\{~}|`.
+Character replacement is performed by shifting the characters from "A" to "Z" by 13 characters out of the 26 characters of "ABCDEFGHIJKLMNOPQRSTUVWXYZ". Also, the numbers "0" to "9" are shifted by 5 characters out of the 10 characters of "0123456789".
 
-For example, "!" is encrypted to "P", "A" is encrypted to "p" and "0" is encrypted to "\_".
-
-```
-Plain : !"#$%&amp;'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNOPQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~
-Cipher: PQRSTUVWXYZ[\]^_`abcdefghijklmnopqrstuvwxyz{|}~!"#$%&amp;'()*+,-./0123456789:;&lt;=&gt;?@ABCDEFGHIJKLMNO
-```
+For example, "A" is encrypted to "N" and "0" is encrypted to "5".
 
 ```
-Plain text : THIS IS A SECRET MESSAGE 123!
-Cipher text: %wx$ x$ p $tr#t% |t$$pvt `abP
+Plain : ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+Cipher: NOPQRSTUVWXYZABCDEFGHIJKLM5678901234
+```
+
+```
+Plain text : THIS IS A SECRET MESSAGE 123
+Cipher text: GUVF VF N FRPERG ZRFFNTR 567
 ```
 
 Since there is reciprocity that plaintext can be obtained by encrypting ciphertext again, decryption can be done in the same flow as encryption.
-
 
 import { Callout } from 'nextra-theme-docs'
