@@ -1,6 +1,6 @@
 ---
 title: 'ROT13 Cipher'
-description: 'Learn how to use Encodething for ROT13 Cipher encryption and decryption'
+description: 'знайте, как использовать Encodething для шифрования и дешифрования ROT13'
 keywords: ['ROT13 Cipher', 'ROT13', 'Cipher', 'Encryption', 'Decryption', 'Encodething']
 author: 'Lystrillian'
 created: 2024-03-31T16:31:12 (UTC +03:00)
@@ -8,27 +8,27 @@ updated: 2024-03-31T16:31:14 (UTC +03:00)
 ---
 
 <Callout type="warning">
-  The Docs are Under Construction
+  Документы находятся в стадии разработки
 </Callout>
 
-### About ROT13
+### О ROT13
 
-ROT13 is one of the single transliteration ciphers that encrypts by replacing the characters in the text with other characters.
+ROT13 - один из шифров с одинарной транслитерацией, который шифрует путем замены символов в тексте на другие.
 
-Character replacement is performed by shifting the characters from "A" to "Z" by 13 characters out of the 26 characters of "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
+Замена символов осуществляется путем сдвига символов от "A" до "Z" на 13 символов из 26 символов "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
 
-For example, "A" is encrypted to "N" and "Z" is encrypted to "M".
-
-```
-Plain : ABCDEFGHIJKLMNOPQRSTUVWXYZ
-Cipher: NOPQRSTUVWXYZABCDEFGHIJKLM
-```
+Например, "A" зашифрован в "N", а "Z" - в "M".
 
 ```
-Plain text : THIS IS A SECRET MESSAGE
-Cipher text: GUVF VF N FRPERG ZRFFNTR
+Простой текст : ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Шифрованный текст: NOPQRSTUVWXYZABCDEFGHIJKLM
 ```
 
-Since there is reciprocity that plaintext can be obtained by encrypting ciphertext again, decryption can be done in the same flow as encryption.
+```
+Простой текст : ЭТО СЕКРЕТНОЕ СООБЩЕНИЕ
+Шифрованный текст: GUVF VF N FRPERG ZRFFNTR
+```
+
+Поскольку существует взаимность, что открытый текст может быть получен путем повторного шифрования шифротекста, дешифрование может быть выполнено в том же потоке, что и шифрование.
 
 import { Callout } from 'nextra-theme-docs'
