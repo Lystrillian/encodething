@@ -1,0 +1,9 @@
+{
+  "introduction": "Введение",
+  "string": "Строки",
+  "number": "Числа",
+  "date": "Даты",
+  "colors": "Цвета",
+  "ciphers": "Шифры",
+  "hash": "Хеш"
+}
