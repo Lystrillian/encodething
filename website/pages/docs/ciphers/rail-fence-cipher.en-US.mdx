@@ -8,20 +8,21 @@ updated: 2024-03-31T16:31:14 (UTC +03:00)
 ---
 
 <Callout type="warning">
-  The Docs are Under Construction
+  Документы находятся в стадии разработки
 </Callout>
 
-### About Rail Fence Cipher
+### О шифре Rail Fence
 
-Rail fence cipher is a transposition cipher.
+Шифр Rail Fence - это шифр с транспозицией.
 
-Characters are arranged in a zigzag pattern on the rail of the fence, and finally, characters are concatenated in rails for encryption.
+Символы располагаются в зигзагообразном порядке на рельсах ограждения, и, наконец, символы объединяются в рельсы для шифрования.
 
-The encryption key is a number of rails.
+Ключ шифрования представляет собой несколько рельсов.
 
-For example, when "THIS\_IS\_A\_SECRET\_MESSAGE" is encrypted with 4 rails, it is as follows.
+Например, если "THIS\_IS\_A\_SECRET\_MESSAGE" шифруется 4 рельсами, то это выглядит следующим образом.
 
-1\. Prepare four rails (height 4) and arrange the characters in zigzag from the upper left.
+1\. Подготовьте четыре рельса (высота 4) и расположите символы зигзагом слева вверху.
+
 
 ```
 -----------------------------------------------
@@ -35,7 +36,7 @@ T           S           C           E
 -----------------------------------------------
 ```
 
-2\. Get the placed characters in each rail.
+2\. Получите размещенные символы в каждом рельсе.
 
 ```
 TSCE
@@ -44,7 +45,7 @@ I_ASE_SG
 S_TA
 ```
 
-3\. Concatenated the rail characters.
+3\. Конкатенация символов рельсов.
 
 ```
 TSCEHI_ERMSEI_ASE_SGS_TA
