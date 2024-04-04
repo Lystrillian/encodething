@@ -1,34 +1,25 @@
----
-title: 'ROT18 Cipher'
-description: 'Узнайте, как использовать Encodething для шифрования и дешифрования ROT18 Cipher'
-keywords: ['ROT18 Cipher', 'ROT18', 'Cipher', 'Encryption', 'Decryption', 'Encodething'].
-author: 'Lystrillian'
-created: 2024-03-31T16:31:12 (UTC+03:00)
-updated: 2024-03-31T16:31:14 (UTC+03:00)
----
-
 <Callout type="warning">
-  Документы находятся на стадии разработки
+  The documents are under development
 </Callout>
 
-## О ROT18
+## ABOUT ROT18
 
-ROT18 - один из единственных транслитерационных шифров, который шифрует путем замены символов в тексте на другие символы.
+ROT18 is one of the only transliteration ciphers that encrypts by replacing characters in the text with other characters.
 
-Замена символов осуществляется путем сдвига символов от "A" до "Z" на 13 символов из 26 символов "ABCDEFGHIJKLMNOPQRSTUVWXYZ". Кроме того, цифры от "0" до "9" сдвигаются на 5 символов из 10 символов "0123456789".
+Character replacement is accomplished by shifting the characters from "A" to "Z" by 13 characters out of the 26 characters "ABCDEFEFGHIJKLMNOPQRSTUVWXYZ". In addition, the digits "0" through "9" are shifted by 5 characters out of 10 characters "0123456789".
 
-Например, "A" зашифровано в "N", а "0" - в "5".
-
-```
-Открытое : ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
-Шифр: NOPQRSTUVWXYZABCDEFGHIJKLM5678901234
-```
+For example, "A" is encrypted to "N" and "0" is encrypted to "5".
 
 ```
-Открытый текст: ЭТО СЕКРЕТНОЕ СООБЩЕНИЕ 123
-Шифрованный текст: GUVF VF N FRPERG ZRFFNTR 567
+Open : ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
+Cipher : NOPQRSTUVWXYZABCDEFGHIJKLM5678901234
 ```
 
-Поскольку существует взаимность, что открытый текст может быть получен путем повторного шифрования шифротекста, дешифрование может быть выполнено в том же потоке, что и шифрование.
+```
+Open Text: THIS IS SECRET MESSAGE 123
+Ciphertext: GUVF VF N FRPERG ZRFFNTR 567
+```
+
+Since there is a reciprocity that the plaintext can be obtained by re-encrypting the ciphertext, decryption can be done in the same thread as encryption.
 
 import { Callout } from 'nextra-theme-docs'
