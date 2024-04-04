@@ -1,0 +1,219 @@
+---
+title: 'Enigma Cipher'
+description: 'Узнайте, как использовать Encodething для шифрования и дешифрования Enigma'
+keywords: ['Enigma Cipher', 'Enigma', 'Cipher', 'Encryption', 'Decryption', 'Encodething']
+author: 'Lystrillian'
+created: 2024-03-31T16:31:12 (UTC +03:00)
+updated: 2024-03-31T16:31:14 (UTC +03:00)
+---
+
+<Callout type="warning">
+  Доки находятся в стадии разработки
+</Callout>
+
+## О шифре Энигма
+
+Шифр Энигма - это тип коммутативного шифра, который шифрует буквы, заменяя их другими буквами. Он поддерживает шифрование 26 символов от "A" до "Z".
+
+Замена символов осуществляется с помощью шифровальной машины Enigma, и Encodething поддерживает следующие модели машины Enigma
+
+- Enigma I
+- Энигма M3
+- Энигма M4 (Энигма для подводных лодок)
+- Норвежская энигма "Норенигма"
+- Sondermaschine (специальная машина)
+- Энигма G "Zählwerk Enigma" (A28/G31)
+- Enigma G G-312 (G31 Abwehr Enigma)
+- Enigma G G-260 (G31 Abwehr Enigma)
+- Энигма G G-111 (венгерская энигма G31)
+- Энигма D (коммерческая Энигма A26)
+- Энигма K (коммерческая Энигма A27)
+- Enigma KD (Enigma K с UKW-D)
+- Swiss-K (швейцарский вариант Энигмы K)
+- Железнодорожная Энигма "Ракета I"
+- Энигма T "Tirpitz" (японская энигма)
+- Испанская Энигма, проводка D
+- Испанская энигма, проводка F
+- Испанская Энигма, Дельта (A 16081)
+- Испанская энигма, Sonderschaltung / Delta (A 16101)
+
+Машина "Энигма" состоит из следующих компонентов. Вводимые с клавиатуры символы проходят через штекерную плату (Steckerbrett), колесо ввода (ETW, Eintrittswalze), три или четыре ротора (Walze), отражатель (UKW, Umkehrwalze), а затем в обратном направлении. Зашифрованный результат выводится на ламповую доску (Lampenfeld). Надпись наносится на все места, включая ротор.
+
+```
+ UKW   Walze  Walze  Walze   ETW  (Stecker)
+         3      2      1
+ ___    ___    ___    ___    ___    ___
+|   |  |   |  |   |  |   |  |   |  |   |
+|  -|--|---|--|---|--|---|--|---|--|---|-- &lt; Tastatur
+| | |  |   |  |   |  |   |  |   |  |   |
+| | |  |   |  |   |  |   |  |   |  |   |
+|  -|--|---|--|---|--|---|--|---|--|---|-- &gt; Lampenfeld
+|   |  |   |  |   |  |   |  |   |  |   |
+ ---    ---    ---    ---    ---    ---
+```
+
+Входные колеса, роторы и отражатели имеют внутренние провода для преобразования 26 букв от "A" до "Z" в другие буквы, и преобразование происходит при подаче напряжения на провода. Например, ротор "I" Энигмы I подключен, как показано ниже, и буква "A" преобразуется в "E". Например, ротор "I" Enigma I подключен следующим образом: буква "A" преобразуется в "E", а буква "J", возвращающаяся из рефлектора, преобразуется в "Z", следуя обратной схеме подключения.
+
+```
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+||||||||||||||||||||||||||
+EKMFLGDQVZNTOWYHXUSPAIBRCJ
+```
+
+Вся проводка для Enigma I выглядит следующим образом.
+
+| Колесо | ABCDEFGHIJKLMNOPQRSTUVWXYZ |
+| --- | --- |
+| ETW | ABCDEFGHIJKLMNOPQRSTUVWXYZ |
+| I | EKMFLGDQVZNTOWYHXUSPAIBRCJ |
+| II | AJDKSIRUXBLHWTMCQGZNPYFVOE |
+| III | BDFHJLCPRTXVZNYEIWGAKMUSQO |
+| IV | ESOVPZJAYQUIRHXLNFTGKDCMWB |
+| V | VZBRGITYUPSDNHLXAWMJQOFECK |
+| UKW-A | EJMZALYXVBWFCRQUONTSPIKHGD |
+| UKW-B | YRUHQSLDPXNGOKMIEBFZCWVJAT |
+| UKW-C | FVPJIAOYEDRZXWGCTKUQSBNMHL |
+
+Коммутационная панель - это механизм, позволяющий пользователю подключать транслитерацию. В некоторых машинах "Энигма" плагин находится на передней панели ETW. Плата имеет входные и выходные клеммы для 26 алфавитов, от "A" до "Z". Соединив два любых алфавита кабелем, можно преобразовать два символа. Например, если соединить кабелем буквы "A" и "M", "A" будет преобразована в "M", а "M" - в "A". Символы входных и выходных терминалов, не соединенных кабелем, не преобразуются.
+
+Когда вы вводите символ с клавиатуры, ротор поворачивается на один шаг. Вращение ротора начинается с ротора с правой стороны, и когда он достигает выемки на роторе, ротор с левой стороны также поворачивается на один шаг. Это вращение ротора меняет проводку для шифрования каждого символа, поэтому даже если вы вводите один и тот же символ, он будет преобразован в другой, отличный от предыдущего.
+
+Ротор имеет кольцо, на внешней окружности которого выгравированы буквы от "A" до "Z" (или от "01" до "26"). Кольцо можно настроить на 26 различных смещений между буквой на его периферии и проводами внутри ротора. Например, в случае с ротором "I" ротора Enigma I, если кольцо установлено на "A (01)", "A" будет преобразована в "E", но если кольцо установлено на "B (02)", "A" будет преобразована в "K", как оригинальная проводка Z-J, поскольку внутренняя проводка сдвинута на единицу.
+
+```
+Кольцо: A (01)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+||||||||||||||||||||||||||
+EKMFLGDQVZNTOWYHXUSPAIBRCJ
+
+Кольцо: B (02)
+BCDEFGHIJKLMNOPQRSTUVWXYZA
+||||||||||||||||||||||||||
+FLNGMHERWAOUPXZIYVTQBJCSDK
+```
+
+Роторы могут быть установлены в порядке и начальном положении вращения. Например, если есть три типа роторов, "I", "II" и "III", они могут быть установлены в Энигма-машине в порядке "II", "I" и "III", и начальное положение каждого ротора может быть установлено между "A (01)" и "Z (26)". Отражатели также взаимозаменяемы между несколькими типами отражателей с различными схемами подключения, а некоторые машины Enigma могут быть установлены в начальное положение. Входное колесо фиксировано и не может быть изменено. Для машин Enigma, оснащенных плагинами, плагин также может быть настроен. Эти настройки являются ключом к шифрованию машины Enigma.
+
+Пример шифрования с помощью Enigma I показан ниже.
+
+```
+Порядок установки колес: UKW-A II I III
+Установка кольца: X M V  (24 13 22)
+Установка положения: A B L  (01 02 12)
+Коммутационная панель: AM FI NV PS TU WZ
+
+Текст до шифрования: SECRET
+Текст после шифрования : LCGODU
+```
+
+В этом случае первая буква "S" будет преобразована в следующую последовательность и, наконец, зашифрована в "L".
+
+```
+S -&gt; P  : Plugboard
+P -&gt; P  : ETW
+P -&gt; L  : III
+L -&gt; P  : I
+P -&gt; W  : II
+W -&gt; K  : UKW-A
+K -&gt; Q  : II
+Q -&gt; O  : I
+O -&gt; L  : III
+L -&gt; L  : ETW
+L -&gt; L  : Plugboard
+```
+
+Вращательное положение ротора и входные (+) / выходные (-) позиции представлены буквами на кольце, как показано ниже. (Поскольку ротор вращается, приведенные выше "расшифрованные символы" и "символы в виде позиций на кольце" отличаются).
+
+```
+           -      +       
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  : Plugboard
+           -   +          
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  : ETW
+           -   +          
+MNOPQRSTUVWXYZABCDEFGHIJKL  : III
+           +  -           
+BCDEFGHIJKLMNOPQRSTUVWXYZA  : I
+               +-         
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  : II
+          -           +   
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  : UKW-A
+```
+
+The Enigma machine has a feature that if you encrypt an encrypted text again with the same settings, you will get the plain text before encryption. Therefore, inputting the encrypted "L" in the above example will yield the original "S".
+
+```
+L -&gt; L  : Plugboard
+L -&gt; L  : ETW
+L -&gt; O  : III
+O -&gt; Q  : I
+Q -&gt; K  : II
+K -&gt; W  : UKW-A
+W -&gt; P  : II
+P -&gt; L  : I
+L -&gt; P  : III
+P -&gt; P  : ETW
+P -&gt; S  : Plugboard
+```
+
+```
+           +      -       
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  : Plugboard
+           +   -          
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  : ETW
+           +   -          
+MNOPQRSTUVWXYZABCDEFGHIJKL  : III
+           -  +           
+BCDEFGHIJKLMNOPQRSTUVWXYZA  : I
+               -+         
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  : II
+          +           -   
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  : UKW-A
+```
+
+## Setting items in Encodething
+
+### Wheel order (Walzenlage)
+
+Set the type of reflector and rotor, and the order of the rotors.
+
+Since the input is from the right side of the Enigma machine, the rotors are counted from the right rotor as 1, 2, 3, and so on, but when describing the wheel order settings, they are generally written in order from left to right. For example, a wheel order of "UKW-A II I III" indicates the settings of rotor 1 "III", rotor 2 "I", rotor 3 "II", and the reflector "UKW-A".
+
+Normally, there is one reflector and three rotors for a total of four, but the Enigma M4 can be configured with a "thin reflector" and a "thin rotor" in the reflector slot. In Encodething, the "thin reflector" is treated like a normal reflector, and the "thin rotor" (Beta, Gamma) is additionally displayed as rotor 4, for a total of 5 settings. However, if the reflector is UKW-D, Rotor 4 cannot be set because it occupies the reflector slot.
+
+### Ring setting (Ringstellung)
+
+Set the ring of the rotor. This setting changes the position of the rotor's internal wiring relative to the ring. On some Enigma machines, the reflector can also be set to ring.
+
+### Position setting (Grundstellung)
+
+Set the initial position of the rotor. On some Enigma machines, the reflector can also be set to its initial position.
+
+It is sometimes called the "Message key" because it was set differently for each message.
+
+### Plugboard wiring (Steckerverbindungen)
+
+Set up the wiring pairs for the plugboard.
+
+In Encodething, wiring is specified by enumerating pairs of two characters to be converted, such as "AB CD EF GH IJ KL", separated by a space. In this example, the pairs are "A" and "B", "C" and "D", and so on.
+
+### Uhr
+
+Uhr is an accessory that connects to a plugboard and selects wiring from 40 ways from "00" to "39". The plugboard and Uhr are connected by 20 cables. When the Uhr is set to "00", that pair of cables is equal to the one wired directly on the plugboard.
+
+Uhr can only be set for Enigma I. Uhr can be set by first specifying 10 sets of wiring pairs on the plugboard.
+
+### UKW-D wiring
+
+UKW-D is a reflector with changeable internal wiring.
+
+The normal notation for reflector rings is "ABCDEFGHIJKLMNOPQRSTUVWXYZ", but UKW-D's notation is in a special order, "A-ZXWVUTSRQPON-MLKIHGFEDCB". The two "-" (BO in normal notation) in the notation are fixed and always wired to each other and cannot be changed. The other 24 characters and 12 pairs of wires are set.
+
+```
+UKW-D notation : A-ZXWVUTSRQPON-MLKIHGFEDCB
+Normal notation: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+```
+
+UKW-D can be set for Enigma I, Enigma M4, and Enigma KD.
+
+
+import { Callout } from 'nextra-theme-docs'
