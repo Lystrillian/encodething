@@ -1,0 +1,12 @@
+{
+  "caesar-cipher": "Шифр Цезаря",
+  "rot13": "ROT13",
+  "rot18": "ROT18", 
+  "rot47": "ROT47",
+  "atbash": "Atbash Шифр",
+  "affine": "Affine Шифр",
+  "vigenere-cipher": "Шифр Вигенера",
+  "enigma-cipher": "Энигма Шифр",
+  "scytale-cipher": "Scytale Шифр",
+  "rail-fence-cipher": "Rail Fence Шифр"
+}
