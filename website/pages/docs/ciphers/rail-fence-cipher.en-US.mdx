@@ -1,6 +1,6 @@
 ---
 title: 'Rail Fence Cipher' 
-description: 'Узнайте, как использовать Encodething для шифрования и дешифрования Rail Fence Шифр'
+description: 'Learn how to use Encodething to encrypt and decrypt the Rail Fence Cipher'
 keywords: ['Rail Fence Cipher', 'Rail Fence', 'Cipher', 'Encryption', 'Decryption', 'Encodething']
 author: 'Lystrillian'
 created: 2024-03-31T16:31:12 (UTC +03:00)
@@ -8,35 +8,35 @@ updated: 2024-03-31T16:31:14 (UTC +03:00)
 ---
 
 <Callout type="warning">
-  Документы находятся в стадии разработки
+Docs are being built
 </Callout>
 
-### О шифре Rail Fence
+### About the Rail Fence cipher
 
-Шифр Rail Fence - это шифр с транспозицией.
+The Rail Fence cipher is a transposition cipher.
 
-Символы располагаются в зигзагообразном порядке на рельсах ограждения, и, наконец, символы объединяются в рельсы для шифрования.
+Characters are arranged in a zigzag order on the rails of the fence, and finally the characters are combined into rails for encryption.
 
-Ключ шифрования представляет собой несколько рельсов.
+The encryption key represents multiple rails.
 
-Например, если "THIS\_IS\_A\_SECRET\_MESSAGE" шифруется 4 рельсами, то это выглядит следующим образом.
+For example, if "THIS\_IS\_A\_SECRET\_MESSAGE" is encrypted with 4 rails, it is as follows.
 
-1\. Подготовьте четыре рельса (высота 4) и расположите символы зигзагом слева вверху.
+1\. Prepare four rails (height 4) and arrange the characters in a zigzag pattern on the top left.
 
 
 ```
 -----------------------------------------------
-T           S           C           E          
+T S C E          
 -----------------------------------------------
-  H       I   _       E   R       M   S       E
+  H I _ E R M S E
 -----------------------------------------------
-    I   _       A   S       E   _       S   G  
+    I _ A S E _ S G  
 -----------------------------------------------
-      S           _           T           A    
+      S _ T A    
 -----------------------------------------------
 ```
 
-2\. Получите размещенные символы в каждом рельсе.
+2\. Get the placed characters in each rail.
 
 ```
 TSCE
@@ -45,7 +45,7 @@ I_ASE_SG
 S_TA
 ```
 
-3\. Конкатенация символов рельсов.
+3\. Concatenation of rail symbols.
 
 ```
 TSCEHI_ERMSEI_ASE_SGS_TA
