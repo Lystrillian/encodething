@@ -1,0 +1,14 @@
+.t {
+  @apply
+  text-sm
+  leading-[143%]
+  text-ds-gray-900
+}
+
+.c {
+  @apply
+  text-sm
+  leading-[143%]
+  font-medium
+  text-ds-gray-1000
+}
