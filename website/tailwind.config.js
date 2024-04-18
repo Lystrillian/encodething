@@ -121,86 +121,69 @@ module.exports = {
         'ds-teal-800': 'hsl(var(--ds-teal-800))',
         'ds-teal-900': 'hsl(var(--ds-teal-900))',
         'ds-teal-1000': 'hsl(var(--ds-teal-1000))',
-        'geist-color-link-color':
-          'hsl(var(--geist-color-success-gesit-success-ligh, hsl(212 100% 60%)))',
-        'geist-color-marketing-gray':
-          'hsl(var(--geist-color-primary-accents-1, hsl(0 0 7%)))',
-        'geist-color-cyan-gesit-cyan':
-          'hsl(var(--geist-color-cyan-gesit-cyan))',
-        'geist-color-cyan-gesit-cyan-dark':
-          'hsl(var(--geist-color-cyan-gesit-cyan-dark))',
-        'geist-color-cyan-gesit-cyan-ligh':
-          'hsl(var(--geist-color-cyan-gesit-cyan-light))',
-        'geist-color-cyan-gesit-cyan-lighter':
-          'hsl(var(--geist-color-cyan-gesit-cyan-lighter))',
-        'geist-color-error-gesit-error':
-          'hsl(var(--geist-color-error-gesit-error))',
-        'geist-color-error-gesit-error-dark':
-          'hsl(var(--geist-color-error-gesit-error-dark))',
-        'geist-color-error-gesit-error-light':
-          'hsl(var(--geist-color-error-gesit-error-light))',
-        'geist-color-error-gesit-error-lighter':
-          'hsl(var(--geist-color-error-gesit-error-lighter))',
-        'geist-color-highlight-gesit-highlight-magenta':
-          'hsl(var(--geist-color-highlight-gesit-highlight-magenta))',
-        'geist-color-highlight-gesit-highlight-pink':
-          'hsl(var(--geist-color-highlight-gesit-highlight-pink))',
-        'geist-color-highlight-gesit-highlight-purple':
-          'hsl(var(--geist-color-highlight-gesit-highlight-purple))',
-        'geist-color-highlight-gesit-highlight-yellow':
-          'hsl(var(--geist-color-highlight-gesit-highlight-magenta))',
-        'geist-color-primary-accents-1':
-          'hsl(var(--geist-color-primary-accents-1))',
-        'geist-color-primary-accents-2':
-          'hsl(var(--geist-color-primary-accents-2))',
-        'geist-color-primary-accents-3':
-          'hsl(var(--geist-color-primary-accents-3))',
-        'geist-color-primary-accents-4':
-          'hsl(var(--geist-color-primary-accents-4))',
-        'geist-color-primary-accents-5':
-          'hsl(var(--geist-color-primary-accents-5))',
-        'geist-color-primary-accents-6':
-          'hsl(var(--geist-color-primary-accents-6))',
-        'geist-color-primary-accents-7':
-          'hsl(var(--geist-color-primary-accents-7))',
-        'geist-color-primary-accents-8':
-          'hsl(var(--geist-color-primary-accents-8))',
-        'geist-color-primary-geist-background':
-          'hsl(var(--geist-color-primary-geist-background))',
-        'geist-color-primary-geist-foreground':
-          'hsl(var(--geist-color-primary-geist-foreground))',
-        'geist-color-secondary-geist-secondary':
-          'hsl(var(--geist-color-primary-accents-5, hsl(0 0 53%)))',
-        'geist-color-secondary-geist-secondary-dark':
-          'hsl(var(--geist-color-primary-accents-7, hsl(0 0 92%)))',
-        'geist-color-secondary-geist-secondary-lighter':
-          'hsl(var(--geist-color-primary-accents-2, hsl(0 0 20%)))',
-        'geist-color-secondary-gesit-secondary-light':
-          'hsl(var(--geist-color-primary-accents-3, hsl(0 0 27%)))',
-        'geist-color-success-gesit-success':
-          'hsl(var(--geist-color-success-gesit-success))',
-        'geist-color-success-gesit-success-dark':
-          'hsl(var(--geist-color-success-gesit-success-dark))',
-        'geist-color-success-gesit-success-light':
-          'hsl(var(--geist-color-success-gesit-success-light))',
-        'geist-color-success-gesit-success-lighter':
-          'hsl(var(--geist-color-success-gesit-success-lighter))',
-        'geist-color-violet-geist-violet':
-          'hsl(var(--geist-color-violet-geist-violet))',
-        'geist-color-violet-geist-violet-dark':
-          'hsl(var(--geist-color-violet-geist-violet-dark))',
-        'geist-color-violet-geist-violet-light':
-          'hsl(var(--geist-color-violet-geist-violet-light))',
-        'geist-color-violet-geist-violet-lighter':
-          'hsl(var(--geist-color-violet-geist-violet-lighter))',
-        'geist-color-warning-geist-warning':
-          'hsl(var(--geist-color-warning-geist-warning))',
-        'geist-color-warning-geist-warning-dark':
-          'hsl(var(--geist-color-warning-geist-warning-dark))',
-        'geist-color-warning-gesit-warning-light':
-          'hsl(var(--geist-color-warning-gesit-warning-light))',
-        'geist-color-warning-gesit-warning-lighter':
-          'hsl(var(--geist-color-warning-gesit-warning-lighter))',
+        'ds-color-link-color':
+          'hsl(var(--ds-color-success-success-light, hsl(212 100% 60%)))',
+        'ds-color-marketing-gray':
+          'hsl(var(--ds-color-primary-accents-1, hsl(0 0 7%)))',
+        'ds-color-cyan-cyan': 'hsl(var(--ds-color-cyan-cyan))',
+        'ds-color-cyan-cyan-dark': 'hsl(var(--ds-color-cyan-cyan-dark))',
+        'ds-color-cyan-cyan-light': 'hsl(var(--ds-color-cyan-cyan-light))',
+        'ds-color-cyan-cyan-lighter': 'hsl(var(--ds-color-cyan-cyan-lighter))',
+        'ds-color-error-error': 'hsl(var(--ds-color-error-error))',
+        'ds-color-error-error-dark': 'hsl(var(--ds-color-error-error-dark))',
+        'ds-color-error-error-light': 'hsl(var(--ds-color-error-error-light))',
+        'ds-color-error-error-lighter':
+          'hsl(var(--ds-color-error-error-lighter))',
+        'ds-color-highlight-highlight-magenta':
+          'hsl(var(--ds-color-highlight-highlight-highlight-magenta))',
+        'ds-color-highlight-highlight-pink':
+          'hsl(var(--ds-color-highlight-highlight-pink))',
+        'ds-color-highlight-highlight-purple':
+          'hsl(var(--ds-color-highlight-highlight-highlight-purple))',
+        'ds-color-highlight-highlight-yellow':
+          'hsl(var(--ds-color-highlight-highlight-highlight-magenta))',
+        'ds-color-primary-accents-1': 'hsl(var(--ds-color-primary-accents-1))',
+        'ds-color-primary-accents-2': 'hsl(var(--ds-color-primary-accents-2))',
+        'ds-color-primary-accents-3': 'hsl(var(--ds-color-primary-accents-3))',
+        'ds-color-primary-accents-4': 'hsl(var(--ds-color-primary-accents-4))',
+        'ds-color-primary-accents-5': 'hsl(var(--ds-color-primary-accents-5))',
+        'ds-color-primary-accents-6': 'hsl(var(--ds-color-primary-accents-6))',
+        'ds-color-primary-accents-7': 'hsl(var(--ds-color-primary-accents-7))',
+        'ds-color-primary-accents-8': 'hsl(var(--ds-color-primary-accents-8))',
+        'ds-color-primary-ds-background':
+          'hsl(var(--ds-color-primary-ds-background))',
+        'ds-color-primary-ds-foreground':
+          'hsl(var(--ds-color-primary-ds-foreground))',
+        'ds-color-secondary-ds-secondary':
+          'hsl(var(--ds-color-primary-accents-5, hsl(0 0 53%)))',
+        'ds-color-secondary-ds-secondary-dark':
+          'hsl(var(--ds-color-primary-accents-7, hsl(0 0 92%)))',
+        'ds-color-secondary-ds-secondary-lighter':
+          'hsl(var(--ds-color-primary-accents-2, hsl(0 0 20%)))',
+        'ds-color-secondary-secondary-light':
+          'hsl(var(--ds-color-primary-accents-3, hsl(0 0 27%)))',
+        'ds-color-success-success': 'hsl(var(--ds-color-success-success))',
+        'ds-color-success-success-dark':
+          'hsl(var(--ds-color-success-success-dark))',
+        'ds-color-success-success-light':
+          'hsl(var(--ds-color-success-success-light))',
+        'ds-color-success-success-lighter':
+          'hsl(var(--ds-color-success-success-lighter))',
+        'ds-color-violet-ds-violet': 'hsl(var(--ds-color-violet-ds-violet))',
+        'ds-color-violet-ds-violet-dark':
+          'hsl(var(--ds-color-violet-ds-violet-dark))',
+        'ds-color-violet-ds-violet-light':
+          'hsl(var(--ds-color-violet-ds-violet-light))',
+        'ds-color-violet-ds-violet-lighter':
+          'hsl(var(--ds-color-violet-ds-violet-lighter))',
+        'ds-color-warning-ds-warning':
+          'hsl(var(--ds-color-warning-ds-warning))',
+        'ds-color-warning-ds-warning-dark':
+          'hsl(var(--ds-color-warning-ds-warning-dark))',
+        'ds-color-warning-ds-warning-light':
+          'hsl(var(--ds-color-warning-ds-warning-light))',
+        'ds-color-warning-ds-warning-lighter':
+          'hsl(var(--ds-color-warning-ds-warning-lighter))',
       },
       gridTemplateRows: {
         '3-fit': 'repeat(3, fit-content)',
