@@ -70,7 +70,7 @@ export function Tick() {
   );
 }
 
-export function Link() {
+export function ExternalLinkIcon() {
   return (
     <>
       <svg
