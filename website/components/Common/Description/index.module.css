@@ -1,12 +1,28 @@
+.c {
+  @apply 
+  relative
+}
+
 .t {
   @apply
   text-sm
   leading-[143%]
   text-ds-gray-900
+  flex
+  gap-2
+  items-center
 }
 
-.c {
+.c:hover .x {
   @apply
+  opacity-100
+}
+
+.x {
+  @apply
+  opacity-0
+  transition-opacity
+  duration-300
   text-sm
   leading-[143%]
   font-medium

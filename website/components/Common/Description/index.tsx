@@ -10,11 +10,11 @@ export default function Description({
 }) {
   return (
     <>
-      <div>
+      <div className={styles.c}>
         <span className={styles.t}>
           {title} <DescriptionIcon />
         </span>
-        <p className={styles.c}>{content}</p>
+        <p className={styles.x}>{content}</p>
       </div>
     </>
   );
