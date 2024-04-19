@@ -1,3 +1,4 @@
+import { forwardRef } from 'react';
 import {
   ErrorDotIcon,
   ReadyDotIcon,
@@ -5,20 +6,46 @@ import {
   CancelledDotIcon,
   QueuedDotIcon,
 } from '../Icon';
+import { cn } from 'lib/utils';
 import styles from './index.module.css';
 
-export interface StatusDotProps {
-  label: string;
-  icon: React.ComponentType<any>;
+export type StatusDotStatus =
+  | 'error'
+  | 'ready'
+  | 'building'
+  | 'cancelled'
+  | 'queued';
+
+export interface StatusDotProps extends React.HTMLAttributes<HTMLDivElement> {
+  status?: StatusDotStatus;
+  label?: string;
 }
 
-export default function StatusDot({ label, icon: Icon }: StatusDotProps) {
-  return (
-    <>
-      <div className={styles.c}>
-        <Icon />
-        <span className={styles.l}>{label}</span>
+const statusIconMap: Record<StatusDotStatus, React.ComponentType<any>> = {
+  error: ErrorDotIcon,
+  ready: ReadyDotIcon,
+  building: BuildingDotIcon,
+  cancelled: CancelledDotIcon,
+  queued: QueuedDotIcon,
+};
+
+const StatusDot = forwardRef<HTMLDivElement, StatusDotProps>(
+  ({ status = 'ready', label, className, ...props }, ref) => {
+    const StatusIcon = statusIconMap[status];
+
+    return (
+      <div
+        ref={ref}
+        className={cn(styles.c, styles[status], className)}
+        {...props}
+      >
+        <StatusIcon className={styles.icon} />
+        {label && <span className={styles.l}>{label}</span>}
       </div>
-    </>
-  );
-}
+    );
+  },
+);
+
+StatusDot.displayName = 'StatusDot';
+
+export { StatusDot };
