@@ -1,4 +1,4 @@
-import { forwardRef } from 'react';
+import * as React from 'react'
 import {
   ErrorDotIcon,
   ReadyDotIcon,
@@ -29,7 +29,7 @@ const statusIconMap: Record<StatusDotStatus, React.ComponentType<any>> = {
   queued: QueuedDotIcon,
 };
 
-const StatusDot = forwardRef<HTMLDivElement, StatusDotProps>(
+const StatusDot = React.forwardRef<HTMLDivElement, StatusDotProps>(
   ({ status = 'ready', label, className, ...props }, ref) => {
     const StatusIcon = statusIconMap[status];
 
