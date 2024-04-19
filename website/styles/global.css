@@ -240,6 +240,10 @@ display:revert; revert to element instead of attribute */
   all: revert;
 }
 
+kbd {
+  margin-top: 0 !important;
+}
+
 @media (prefers-color-scheme: light) {
   body {
     text-size-adjust: 100%;
@@ -291,7 +295,6 @@ display:revert; revert to element instead of attribute */
     font-weight: 600;
     padding-bottom: 0.3em;
     font-size: 2em;
-    border-bottom: 1px solid hsl(210deg 18% 87% / 100%);
   }
 
   mark {
@@ -323,7 +326,7 @@ display:revert; revert to element instead of attribute */
     border-style: none;
     max-width: 100%;
     box-sizing: content-box;
-    background-color: #fff;
+    background-color: transparent;
   }
 
   code,
@@ -504,7 +507,6 @@ display:revert; revert to element instead of attribute */
     font-weight: 600;
     padding-bottom: 0.3em;
     font-size: 1.5em;
-    border-bottom: 1px solid hsl(210deg 18% 87% / 100%);
   }
 
   h3 {
@@ -850,7 +852,6 @@ display:revert; revert to element instead of attribute */
     font-weight: 600;
     padding-bottom: 0.3em;
     font-size: 2em;
-    border-bottom: 1px solid #21262d;
   }
 
   mark {
@@ -882,7 +883,7 @@ display:revert; revert to element instead of attribute */
     border-style: none;
     max-width: 100%;
     box-sizing: content-box;
-    background-color: #0d1117;
+    background-color: transparent;
   }
 
   code,
@@ -1063,7 +1064,6 @@ display:revert; revert to element instead of attribute */
     font-weight: 600;
     padding-bottom: 0.3em;
     font-size: 1.5em;
-    border-bottom: 1px solid #21262d;
   }
 
   h3 {
