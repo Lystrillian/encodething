@@ -1,4 +1,4 @@
-export function DescriptionIcon() {
+export function DescriptionIcon({ className }: { className?: string }) {
   return (
     <>
       <svg
@@ -6,6 +6,7 @@ export function DescriptionIcon() {
         height="24"
         viewBox="0 0 14 14"
         fill="none"
+        className={className}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -17,16 +18,16 @@ export function DescriptionIcon() {
         <path
           d="M7 9.33333C7 8.42211 7 7.91122 7 7M7 4.66666H7.00583"
           stroke="white"
-          stroke-width="0.875"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="0.875"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </>
   );
 }
 
-export function Copy() {
+export function Copy({ className }: { className?: string }) {
   return (
     <>
       <svg
@@ -34,6 +35,7 @@ export function Copy() {
         height="20"
         viewBox="0 0 20 20"
         fill="none"
+        className={className}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -48,7 +50,7 @@ export function Copy() {
   );
 }
 
-export function Tick() {
+export function Tick({ className }: { className?: string }) {
   return (
     <>
       <svg
@@ -56,21 +58,22 @@ export function Tick() {
         height="20"
         viewBox="0 0 20 20"
         fill="none"
+        className={className}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
           d="M16.6667 5L7.50001 14.1667L3.33334 10"
           stroke="#EDEDED"
-          stroke-width="1.66667"
-          stroke-linecap="round"
-          stroke-linejoin="round"
+          strokeWidth="1.66667"
+          strokeLinecap="round"
+          strokeLinejoin="round"
         />
       </svg>
     </>
   );
 }
 
-export function ExternalLinkIcon() {
+export function ExternalLinkIcon({ className }: { className?: string }) {
   return (
     <>
       <svg
@@ -78,6 +81,7 @@ export function ExternalLinkIcon() {
         height="16"
         viewBox="0 0 16 16"
         fill="none"
+        className={className}
         xmlns="http://www.w3.org/2000/svg"
       >
         <path
@@ -92,7 +96,7 @@ export function ExternalLinkIcon() {
   );
 }
 
-export function RadioIcon() {
+export function RadioIcon({ className }: { className?: string }) {
   return (
     <>
       <svg
@@ -100,6 +104,7 @@ export function RadioIcon() {
         height="8"
         viewBox="0 0 8 8"
         fill="none"
+        className={className}
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect width="8" height="8" rx="4" fill="#EDEDED" />
@@ -108,7 +113,7 @@ export function RadioIcon() {
   );
 }
 
-export function QueuedDotIcon() {
+export function QueuedDotIcon({ className }: { className?: string }) {{
   return (
     <>
       <svg
@@ -116,6 +121,7 @@ export function QueuedDotIcon() {
         height="10"
         viewBox="0 0 10 10"
         fill="none"
+        className={className}
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect width="10" height="10" rx="5" fill="#333333" />
@@ -124,7 +130,7 @@ export function QueuedDotIcon() {
   );
 }
 
-export function BuildingDotIcon() {
+export function BuildingDotIcon({ className }: { className?: string }) {
   return (
     <>
       <svg
@@ -132,6 +138,7 @@ export function BuildingDotIcon() {
         height="10"
         viewBox="0 0 10 10"
         fill="none"
+        className={className}
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect width="10" height="10" rx="5" fill="#F5A623" />
@@ -140,7 +147,7 @@ export function BuildingDotIcon() {
   );
 }
 
-export function ErrorDotIcon() {
+export function ErrorDotIcon({ className }: { className?: string }) {
   return (
     <>
       <svg
@@ -148,6 +155,8 @@ export function ErrorDotIcon() {
         height="10"
         viewBox="0 0 10 10"
         fill="none"
+                className={className}
+
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect width="10" height="10" rx="5" fill="#EE0000" />
@@ -156,7 +165,7 @@ export function ErrorDotIcon() {
   );
 }
 
-export function ReadyDotIcon() {
+export function ReadyDotIcon({ className }: { className?: string }) {
   return (
     <>
       <svg
@@ -164,6 +173,8 @@ export function ReadyDotIcon() {
         height="10"
         viewBox="0 0 10 10"
         fill="none"
+                className={className}
+
         xmlns="http://www.w3.org/2000/svg"
       >
         <rect width="10" height="10" rx="5" fill="#50E3C2" />
@@ -172,12 +183,13 @@ export function ReadyDotIcon() {
   );
 }
 
-export function CancelledDotIcon() {
+export function CancelledDotIcon({ className }: { className?: string }) {
   return (
     <>
       <svg
         width="10"
         height="10"
+        className={className}
         viewBox="0 0 10 10"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
