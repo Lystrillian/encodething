@@ -11,7 +11,7 @@ export function Hero() {
         <div className="relative pt-20 ml-auto md:pt-36">
           <div className="mx-auto mt-4 text-center">
             <h1
-              className="mx-auto font-medium text-zinc-900 dark:text-white"
+              className="mx-auto font-medium text-zinc-900 dark:text-ds-gray-1000"
               style={{
                 fontSize: 'clamp(1.375rem, 1.054rem + 1.61vw, 2.5rem)',
                 letterSpacing:
@@ -19,8 +19,8 @@ export function Hero() {
                 maxWidth: 'clamp(16.25rem, 2.841rem + 67.05vw, 53.125rem)',
               }}
             >
-              {hero.encodingTool}.
-              <span className="text-gray-main">{hero.functionalities}</span>
+              {hero.encodingTool}.{' '}
+              <span className="text-ds-gray-900">{hero.functionalities}</span>
             </h1>
             <div className="flex flex-wrap justify-center mt-8 gap-y-4 gap-x-6">
               <Link
@@ -30,13 +30,13 @@ export function Hero() {
               >
                 <button
                   type="button"
-                  className="relative bg-white-main text-[#0a0a0a] w-full sm:w-max xl:w-[200px] rounded-full py-0 px-3 font-semibold pointer text-[14px] leading-[125%] text-center flex items-center justify-center transition-all hover:shadow-[0_0_0_3px_rgba(255,255,255,0.3)_inset]"
+                  className="relative bg-ds-gray-1000 text-ds-background-100 w-full sm:w-max xl:w-[200px] rounded-full py-0 px-3 font-semibold pointer text-[14px] leading-[125%] text-center flex items-center justify-center transition-all hover:shadow-[0_0_0_3px_rgba(255,255,255,0.3)_inset]"
                   style={{
                     minHeight: 'clamp(2.5rem, 2.357rem + 0.71vw, 3rem)',
                   }}
                   aria-label="Get Started Button"
                 >
-                  <span className="relative whitespace-pre text-center text-base font-semibold leading-none tracking-tight text-[#0a0a0a] z-10">
+                  <span className="relative whitespace-pre text-center text-base font-semibold leading-none tracking-tight text-ds-background-100 z-10">
                     {hero.convertTailwind}
                   </span>
                 </button>
