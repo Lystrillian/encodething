@@ -2,6 +2,7 @@
   @apply 
   flex
   min-h-[80px]
+  max-w-[600px]
   w-full
   rounded-md
   text-ds-gray-900
@@ -12,7 +13,7 @@
   border
   border-solid
   border-ds-gray-alpha-400
-  active:text-geist-color-primary-geist-foreground
+  active:text-ds-color-primary-ds-foreground
   active:shadow-[0px_0px_0px_4px_var(--ds-gray-alpha-500),_0_0_0_1px_var(--ds-gray-alpha-600)]
   hover:border-ds-gray-alpha-500
   focus-visible:outline-none
