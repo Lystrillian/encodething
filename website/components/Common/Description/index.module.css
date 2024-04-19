@@ -3,14 +3,19 @@
   relative
 }
 
+.h {
+  @apply
+  flex
+  items-center
+  gap-2
+}
+
 .t {
   @apply
   text-sm
   leading-[143%]
   text-ds-gray-900
-  flex
-  gap-2
-  items-center
+  mb-0
 }
 
 .c:hover .x {
