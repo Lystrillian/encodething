@@ -107,3 +107,106 @@ export function RadioIcon() {
     </>
   );
 }
+
+export function QueuedDotIcon() {
+  return (
+    <>
+      <svg
+        width="10"
+        height="10"
+        viewBox="0 0 10 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="10" height="10" rx="5" fill="#333333" />
+      </svg>
+    </>
+  );
+}
+
+export function BuildingDotIcon() {
+  return (
+    <>
+      <svg
+        width="10"
+        height="10"
+        viewBox="0 0 10 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="10" height="10" rx="5" fill="#F5A623" />
+      </svg>
+    </>
+  );
+}
+
+export function ErrorDotIcon() {
+  return (
+    <>
+      <svg
+        width="10"
+        height="10"
+        viewBox="0 0 10 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="10" height="10" rx="5" fill="#EE0000" />
+      </svg>
+    </>
+  );
+}
+
+export function ReadyDotIcon() {
+  return (
+    <>
+      <svg
+        width="10"
+        height="10"
+        viewBox="0 0 10 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="10" height="10" rx="5" fill="#50E3C2" />
+      </svg>
+    </>
+  );
+}
+
+export function CancelledDotIcon() {
+  return (
+    <>
+      <svg
+        width="10"
+        height="10"
+        viewBox="0 0 10 10"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <rect width="10" height="10" rx="5" fill="#333333" />
+      </svg>
+    </>
+  );
+}
+
+export function FallbackIcon({ className }: { className?: string }) {
+  return (
+    <>
+      <svg
+        width="16"
+        height="16"
+        viewBox="0 0 16 16"
+        fill="none"
+        className={className}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M8 14.6667C8 14.6667 13.3333 12 13.3333 8.00001V3.33334L8 1.33334L2.66666 3.33334V8.00001C2.66666 12 8 14.6667 8 14.6667Z"
+          stroke="#0A0A0A"
+          strokeWidth="1.33333"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    </>
+  );
+}
