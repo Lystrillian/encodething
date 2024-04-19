@@ -3,130 +3,99 @@ import { useRouter } from 'next/router';
 import { useConfig, type DocsThemeConfig } from 'nextra-theme-docs';
 import LogoIcon from './components/icons/logo-icon';
 import TwitterIcon from './components/icons/twitter-icon';
+import Link from 'next/link';
+
+const MenuItems = [
+  {
+    title: 'Resources',
+    items: [
+      { label: 'Documentation', href: '#' },
+      { label: 'Converters', href: '#' },
+      { label: 'Tailwind Converter', href: '#' },
+    ],
+  },
+  {
+    title: 'Types',
+    items: [
+      { label: 'Strings', href: '#' },
+      { label: 'Numbers', href: '#' },
+      { label: 'Date', href: '#' },
+      { label: 'Colors', href: '#' },
+      { label: 'Ciphers', href: '#' },
+      { label: 'Hash', href: '#' },
+    ],
+  },
+  {
+    title: 'About',
+    items: [
+      { label: 'Encodething', href: '#' },
+      { label: 'Privacy Policy', href: '#' },
+      { label: 'Code Policy', href: '#' },
+      { label: 'Terms of Service', href: '#' },
+      { label: 'Telemetry', href: '#' },
+    ],
+  },
+];
 
 const config: DocsThemeConfig = {
   logo: () => {
     return (
-      <span>
-        <div className="flex flex-row flex-nowrap flex-auto grow items-center gap-3 font-medium text-center text-white-main py-1.5 px-3">
-          <div>
-            <LogoIcon />
-          </div>
-          <div
-            style={{
-              letterSpacing:
-                'calc(-0px - clamp(0.06rem, 0.048rem + 0.001vw, 0.094rem))',
-              fontSize: 'clamp(1rem, 0.857rem + 0.71vw, 1.5rem)',
-            }}
-          >
-            encode<span className="text-[#34e6a0]">thing</span>
-          </div>
-        </div>
-      </span>
+      <figure
+        role="presentation"
+        className="flex gap-3 flex-row flex-nowrap flex-auto grow items-center font-medium text-center text-white-main py-1.5 px-3"
+      >
+        <LogoIcon />
+        <figcaption
+          style={{
+            letterSpacing:
+              'calc(-0px - clamp(0.06rem, 0.048rem + 0.001vw, 0.094rem))',
+            fontSize: 'clamp(1rem, 0.857rem + 0.71vw, 1.5rem)',
+          }}
+        >
+          encode<span className="text-[#34e6a0]">thing</span>
+        </figcaption>
+      </figure>
     );
   },
+
   project: {
-    link: 'https://example.com/', // Edit tis later
+    link: 'https://github.com/Lystrillian/encodething/', // Edit later
     icon: <GitHubIcon />,
   },
-  docsRepositoryBase: 'https://example.com/', // Edit tis later
+
+  docsRepositoryBase: 'https://github.com/Lystrillian/encodething/', // Edit later
+
   footer: {
     text: (
       <div className="flex flex-col items-start gap-6 xl:flex-row w-full justify-between">
         <div>© {new Date().getFullYear()} Lystrillian.</div>
-
-        <div>
-          <p className="text-base pb-2 text-white font-bold">Resources</p>
-          <ul className="flex flex-col gap-2">
-            <li>
-              <a href="#" className="text-sm">
-                Documentation
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm">
-                Converters
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm">
-                Tailwind Converter
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <p className="text-base pb-2 text-white font-bold">Types</p>
-          <ul className="flex flex-col gap-2">
-            <li>
-              <a href="#" className="text-sm">
-                Strings
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm">
-                Numbers
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm">
-                Date
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm">
-                Colors
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm">
-                Ciphers
-              </a>
-            </li>
-            <li>
-              <a href="#" className="text-sm">
-                Hash
-              </a>
-            </li>
-          </ul>
-        </div>
-
-        <div>
-          <p className="text-base pb-2 text-white font-bold">About</p>
-          <ul className="flex flex-col gap-2">
-            <li>
-              <a href="#" className="text-sm">
-                Encodething
-              </a>
-            </li>
-            <li>
-              <a href="#">Privacy Policy</a>
-            </li>
-            <li>
-              <a href="#">Code Policy</a>
-            </li>
-            <li>
-              <a href="#">Terms of Service</a>
-            </li>
-            <li>
-              <a href="#">Telemetry</a>
-            </li>
-          </ul>
-        </div>
+        {MenuItems.map(({ title, items }) => (
+          <div key={title} className="flex flex-col gap-2">
+            <p className="text-base pb-2 text-white font-bold">{title}</p>
+            <ul className="flex flex-col gap-2">
+              {items.map(({ label, href }) => (
+                <li key={label}>
+                  <Link href={href} className="text-sm" tabIndex={0}>
+                    {label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
 
         <div>
           <p className="text-base pb-2 text-white font-bold">Contact</p>
           <ul className="flex flex-wrap gap-2">
             <li>
-              <a href="#" className="text-sm">
+              <Link href="#" className="text-sm">
                 <GitHubIcon />
-              </a>
+              </Link>
             </li>
             <li>
-              <a href="#" className="text-sm">
+              <Link href="#" className="text-sm">
                 <TwitterIcon />
-              </a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -175,13 +144,6 @@ const config: DocsThemeConfig = {
         <link rel="shortcut icon" href={favicon} type="image/svg+xml" />
         <link rel="apple-touch-icon" href={favicon} type="image/svg+xml" />
         <meta name="apple-mobile-web-app-title" content={title} />
-
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link
-          rel="preconnect"
-          href="https://fonts.gstatic.com"
-          crossOrigin="anonymous"
-        />
       </>
     );
   },
