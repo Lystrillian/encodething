@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { cn } from 'lib/utils';
-import { FallbackIcon } from '../Icon/index';
+import { FallbackIcon } from '../Icon';
 
 const badgeVariants = {
   gray: 'bg-ds-gray-700 text-ds-background-100',
@@ -28,9 +28,9 @@ const badgeSubtleVariants = {
 };
 
 const badgeSizes = {
-  sm: 'h-5 px-1.5 gap-0.5',
-  md: 'h-6 px-2.5 gap-2',
-  lg: 'h-8 px-3 gap-3',
+  sm: 'text-[11px] h-5 px-1.5 gap-0.5',
+  md: 'text-[12px] h-6 px-2.5 gap-2',
+  lg: 'text-[14px] h-8 px-3 gap-3',
 };
 
 export interface BadgeProps extends React.HTMLAttributes<HTMLDivElement> {
@@ -53,14 +53,14 @@ export function Badge({
   return (
     <div
       className={cn(
-        'inline-flex items-center rounded-[32px] font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2',
+        'inline-flex items-center rounded-[32px] font-medium transition-colors',
         subtle ? badgeSubtleVariants[variant] : badgeVariants[variant],
         badgeSizes[size],
         className,
       )}
       {...props}
     >
-      {icon || <FallbackIcon className="mr-1 h-3 w-3" />}
+      {icon || <FallbackIcon size={16} />}
       <span>{label}</span>
     </div>
   );
