@@ -1,24 +1,48 @@
+import * as React from 'react';
 import Link from 'next/link';
-import styles from './index.module.css';
 import { ExternalLinkIcon } from '../Icon';
+import { cn } from 'lib/utils';
+import styles from './index.module.css';
 
-export default function CustomLink({
-  href,
-  label,
-  text,
-}: {
+export interface CustomLinkProps
+  extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   href: string;
   label: string;
   text: string;
-}) {
-  return (
-    <>
-      <Link href={href} aria-label={label} className={styles.l}>
-        {text}{' '}
-        <div>
-          <ExternalLinkIcon />
-        </div>
-      </Link>
-    </>
-  );
+  icon?: React.ReactNode;
+  iconClassName?: string;
+  textClassName?: string;
 }
+
+const CustomLink = React.forwardRef<HTMLAnchorElement, CustomLinkProps>(
+  (
+    {
+      href,
+      label,
+      text,
+      icon = <ExternalLinkIcon strokeWidth={1} />,
+      iconClassName,
+      textClassName,
+      className,
+      ...props
+    },
+    ref,
+  ) => {
+    return (
+      <Link
+        ref={ref}
+        href={href}
+        aria-label={label}
+        className={cn(styles.l, className)}
+        {...props}
+      >
+        <span className={cn(styles.t, textClassName)}>{text}</span>
+        <span className={cn(styles.i, iconClassName)}>{icon}</span>
+      </Link>
+    );
+  },
+);
+
+CustomLink.displayName = 'CustomLink';
+
+export { CustomLink };
