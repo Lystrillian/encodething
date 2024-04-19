@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { useTranslations } from '../../hooks/use-translations';
-import illu1 from '../../public/illu1.svg';
-import illu2 from '../../public/illu2.svg';
+import IllustrationSettings from '../../public/illu1.svg';
+import IllustrationTyping from '../../public/illu2.svg';
 
 export default function BenefitsGrid() {
   const { benefits } = useTranslations();
@@ -17,34 +17,42 @@ export default function BenefitsGrid() {
           Benefits Grid
         </h1>
         <div className="p-16 shadow-[0_0_0_1px_rgba(255,255,255,0.14)]">
-          <div className="flex gap-3 font-normal text-[18px] text-gray-main">
+          <div className="flex gap-3 font-normal text-[18px] text-ds-gray-900">
             <Settings /> <p>{benefits.autoConfiguration}</p>
           </div>
           <p
-            className="text-gray-main"
+            className="text-ds-gray-900"
             style={{ fontSize: 'clamp(1rem, 0.943rem + 0.28vw, 1.125rem)' }}
           >
-            <span className="font-semibold text-white-main">
+            <span className="font-semibold text-ds-gray-1000">
               {benefits.configurationEase}
             </span>{' '}
             {benefits.standardValues}
           </p>
-          <Image src={illu1} alt="" style={{ marginInline: 'auto' }} />
+          <Image
+            src={IllustrationSettings}
+            alt=""
+            style={{ marginInline: 'auto' }}
+          />
         </div>
         <div className="p-16 shadow-[0_0_0_1px_rgba(255,255,255,0.14)]">
-          <div className="flex gap-3 font-normal text-[18px] text-gray-main">
+          <div className="flex gap-3 font-normal text-[18px] text-ds-gray-900">
             <Typing /> <p>{benefits.autoConfiguration}</p>
           </div>
           <p
-            className="text-gray-main"
+            className="text-ds-gray-900"
             style={{ fontSize: 'clamp(1rem, 0.943rem + 0.28vw, 1.125rem)' }}
           >
-            <span className="font-semibold text-white-main">
+            <span className="font-semibold text-ds-gray-1000">
               {benefits.configurationEase}
             </span>
             {benefits.standardValues}
           </p>
-          <Image src={illu2} alt="" style={{ marginInline: 'auto' }} />
+          <Image
+            src={IllustrationTyping}
+            alt=""
+            style={{ marginInline: 'auto' }}
+          />
         </div>
       </section>
     </>
