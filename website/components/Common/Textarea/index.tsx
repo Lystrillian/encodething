@@ -63,7 +63,7 @@ const Textarea: React.FC<TextareaProps> = ({
       )}
       <textarea
         ref={textareaRef}
-        className={styles.textarea}
+        className={styles.j}
         value={value}
         onChange={onChange}
         placeholder={placeholder}
