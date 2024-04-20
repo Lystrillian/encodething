@@ -1,0 +1,30 @@
+import { useState } from 'react';
+import crypto from 'crypto';
+import Textarea from '@textarea';
+import { CustomLink } from '@link';
+
+export default function MD5Hash() {
+  const [hash, setHash] = useState('');
+
+  const handleChange = (e) => {
+    const text = e.target.value;
+    const md5Hash = crypto.createHash('md5').update(text).digest('hex');
+    setHash(md5Hash);
+  };
+
+  return (
+    <div>
+      <Textarea onChange={handleChange} />
+      <div>
+        <h2>MD5 Hash:</h2>
+        <p>{hash}</p>
+      </div>
+      <div>
+      <h2>Documentation:</h2>
+      <CustomLink href="/docs/hash/md5" label="MD5 Hash" text="MD5 Hash">
+        MD5 Hash
+      </CustomLink>
+      </div>
+    </div>
+  );
+}
