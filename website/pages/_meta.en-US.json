@@ -4,7 +4,9 @@
     "title": "Encodething",
     "display": "hidden",
     "theme": {
-      "layout": "raw"
+      "layout": "raw",
+      "typesetting": "article",
+      "footer": false
     }
   },
   "docs": {
@@ -58,10 +60,6 @@
       "code-policy": {
         "title": "Code Policy",
         "href": "/code-policy"
-      },
-      "terms": {
-        "title": "Terms of Service",
-        "href": "/terms"
       },
       "telemetry": {
         "title": "Telemetry",
