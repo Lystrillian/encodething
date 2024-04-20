@@ -19,7 +19,20 @@
     "paths": {
       "@components/*": ["components/*"],
       "react": ["./node_modules/@types/react"],
-      "react-dom": ["./node_modules/@types/react-dom"]
+      "react-dom": ["./node_modules/@types/react-dom"],
+      "@aspect-ratio": ["./components/Common/AspectRatio/index.tsx"],
+      "@badge": ["./components/Common/Badge/index.tsx"],
+      "@checkbox": ["./components/Common/Checkbox/index.tsx"],
+      "@description": ["./components/Common/Description/index.tsx"],
+      "@icon": ["./components/Common/Icon/index.tsx"],
+      "@keyboard-input": ["./components/Common/KeyboardInput/index.tsx"],
+      "@link": ["./components/Common/Link/index.tsx"],
+      "@progress": ["./components/Common/Progress/index.tsx"],
+      "@snippet": ["./components/Common/Snippet/index.tsx"],
+      "@status-dot": ["./components/Common/StatusDot/index.tsx"],
+      "@table": ["./components/Common/Table/index.tsx"],
+      "@textarea": ["./components/Common/Textarea/index.tsx"],
+      "@typography": ["./components/Common/Typography/index.tsx"],
     }
   },
   "include": ["video.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx", "middleware.js"],
