@@ -20,7 +20,7 @@ const CustomLink = React.forwardRef<HTMLAnchorElement, CustomLinkProps>(
       href,
       label,
       text,
-      icon = <ExternalLinkIcon strokeWidth={1} />,
+      icon = <ExternalLinkIcon size={16} strokeWidth={1} />,
       iconClassName,
       textClassName,
       className,
