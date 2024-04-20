@@ -165,9 +165,6 @@ const config: DocsThemeConfig = {
   themeSwitch: {
     component: null,
   },
-  // i18n: [
-  //   { locale: 'en-US', text: 'English' },
-  // ],
   useNextSeoProps() {
     const { asPath, pathname, query } = useRouter();
 
