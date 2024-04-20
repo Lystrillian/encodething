@@ -1,9 +1,9 @@
 import Lenis from '@studio-freight/lenis';
 import { useEffect } from 'react';
-import BenefitsGrid from './benefits';
-import DescriptionGrid from './description';
-import { Hero } from './hero';
-import TailwindSection from './tailwind';
+import BenefitsGrid from './BenefitsGrid';
+import DescriptionGrid from './DescriptionGrid';
+import { Hero } from './HeroSection';
+import TailwindSection from './Tailwind';
 import Textarea from '@components/Common/Textarea';
 
 export function Home(): JSX.Element {

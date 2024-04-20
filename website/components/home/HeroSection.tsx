@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { useTranslations } from '../../hooks/use-translations';
-import { Container } from './container';
+import { Container } from './Container';
 
 export function Hero() {
   const { hero } = useTranslations();
