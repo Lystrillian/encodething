@@ -1,13 +1,12 @@
 import Link from 'next/link';
 import { useTranslations } from '../../hooks/use-translations';
-import { Container } from './Container';
 
 export function Hero() {
   const { hero } = useTranslations();
 
   return (
     <div className="relative pb-10">
-      <Container>
+      <div className='"max-w-7xl mx-auto px-6 md:px-12 xl:px-6"'>
         <div className="relative pt-20 ml-auto md:pt-36">
           <div className="mx-auto mt-4 text-center">
             <h1
@@ -62,7 +61,7 @@ export function Hero() {
             </div>
           </div>
         </div>
-      </Container>
+      </div>
     </div>
   );
 }
