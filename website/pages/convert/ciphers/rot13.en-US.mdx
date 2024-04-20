@@ -1,34 +1,34 @@
----
-title: 'ROT13 Cipher'
-description: 'знайте, как использовать Encodething для шифрования и дешифрования ROT13'
-keywords: ['ROT13 Cipher', 'ROT13', 'Cipher', 'Encryption', 'Decryption', 'Encodething']
-author: 'Lystrillian'
-created: 2024-03-31T16:31:12 (UTC +03:00)
-updated: 2024-03-31T16:31:14 (UTC +03:00)
----
+import { useState } from 'react';
+import Textarea from '@textarea';
+import { CustomLink } from '@link';
+import useRot13 from '@hooks/ciphers/useRot13';
 
-<Callout type="warning">
-  Документы находятся в стадии разработки
-</Callout>
+export default function ROT13Converter() {
+  const [inputText, setInputText] = useState('');
+  const { encodedValue, decodedValue } = useRot13(inputText);
 
-### О ROT13
-
-ROT13 - один из шифров с одинарной транслитерацией, который шифрует путем замены символов в тексте на другие.
-
-Замена символов осуществляется путем сдвига символов от "A" до "Z" на 13 символов из 26 символов "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
-
-Например, "A" зашифрован в "N", а "Z" - в "M".
-
-```
-Простой текст : ABCDEFGHIJKLMNOPQRSTUVWXYZ
-Шифрованный текст: NOPQRSTUVWXYZABCDEFGHIJKLM
-```
-
-```
-Простой текст : ЭТО СЕКРЕТНОЕ СООБЩЕНИЕ
-Шифрованный текст: GUVF VF N FRPERG ZRFFNTR
-```
-
-Поскольку существует взаимность, что открытый текст может быть получен путем повторного шифрования шифротекста, дешифрование может быть выполнено в том же потоке, что и шифрование.
-
-import { Callout } from 'nextra-theme-docs'
+  return (
+    <div>
+      <h2>ROT13 Converter</h2>
+      <Textarea
+        value={inputText}
+        onChange={(e) => setInputText(e.target.value)}
+        placeholder="Enter text to convert to ROT13"
+      />
+      <div>
+        <h3>Encoded Value:</h3>
+        <p>{encodedValue}</p>
+      </div>
+      <div>
+        <h3>Decoded Value:</h3>
+        <p>{decodedValue}</p>
+      </div>
+      <div>
+        <h3>Documentation:</h3>
+        <CustomLink href="https://en.wikipedia.org/wiki/ROT13">
+          ROT13 on Wikipedia
+        </CustomLink>
+      </div>
+    </div>
+  );
+}

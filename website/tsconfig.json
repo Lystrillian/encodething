@@ -33,6 +33,8 @@
       "@table": ["./components/Common/Table/index.tsx"],
       "@textarea": ["./components/Common/Textarea/index.tsx"],
       "@typography": ["./components/Common/Typography/index.tsx"],
+      "@hooks/*": ["./hooks/*"],
+      "@utils": ["./lib/utils.ts"],
     }
   },
   "include": ["video.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx", "middleware.js"],
