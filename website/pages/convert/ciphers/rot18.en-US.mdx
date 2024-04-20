@@ -1,25 +1,34 @@
-<Callout type="warning">
-  The documents are under development
-</Callout>
+import { useState } from 'react';
+import Textarea from '@textarea';
+import { CustomLink } from '@link';
+import useRot18 from '@hooks/ciphers/useRot18';
 
-## ABOUT ROT18
+export default function ROT18Converter() {
+  const [inputText, setInputText] = useState('');
+  const { encodedValue, decodedValue } = useRot18(inputText);
 
-ROT18 is one of the only transliteration ciphers that encrypts by replacing characters in the text with other characters.
-
-Character replacement is accomplished by shifting the characters from "A" to "Z" by 13 characters out of the 26 characters "ABCDEFEFGHIJKLMNOPQRSTUVWXYZ". In addition, the digits "0" through "9" are shifted by 5 characters out of 10 characters "0123456789".
-
-For example, "A" is encrypted to "N" and "0" is encrypted to "5".
-
-```
-Open : ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789
-Cipher : NOPQRSTUVWXYZABCDEFGHIJKLM5678901234
-```
-
-```
-Open Text: THIS IS SECRET MESSAGE 123
-Ciphertext: GUVF VF N FRPERG ZRFFNTR 567
-```
-
-Since there is a reciprocity that the plaintext can be obtained by re-encrypting the ciphertext, decryption can be done in the same thread as encryption.
-
-import { Callout } from 'nextra-theme-docs'
+  return (
+    <div>
+      <h2>ROT18 Converter</h2>
+      <Textarea
+        value={inputText}
+        onChange={(e) => setInputText(e.target.value)}
+        placeholder="Enter text to convert to ROT18"
+      />
+      <div>
+        <h3>Encoded Value:</h3>
+        <p>{encodedValue}</p>
+      </div>
+      <div>
+        <h3>Decoded Value:</h3>
+        <p>{decodedValue}</p>
+      </div>
+      <div>
+        <h3>Documentation:</h3>
+        <CustomLink href="https://en.wikipedia.org/wiki/ROT18">
+          ROT18 on Wikipedia
+        </CustomLink>
+      </div>
+    </div>
+  );
+}
