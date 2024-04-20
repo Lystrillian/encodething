@@ -1,0 +1,50 @@
+---
+title: 'SHA-256 Hash'
+description: 'Learn about the SHA-256 hash function, its applications, and its security'
+keywords: ['SHA-256', 'Hash', 'Encodething', 'Convert', 'Converter', 'Encoding', 'Decoding', 'Hashing', 'Cryptography', 'Security']
+author: 'Lystrillian'
+created: 2024-03-31T16:25:25 (UTC +03:00)
+updated: 2024-03-31T16:25:25 (UTC +03:00)
+---
+
+# SHA-256 Hash
+
+SHA-256 (Secure Hash Algorithm 256-bit) is a cryptographic hash function that is part of the SHA-2 family of hash functions, designed by the United States National Security Agency (NSA) and published by the National Institute of Standards and Technology (NIST) in 2001. SHA-256 takes an input of arbitrary length and produces a fixed-size 256-bit (32-byte) hash value, typically expressed as a 64-character hexadecimal string. It is widely used in various security applications and protocols due to its strong security properties and resistance to known attacks.
+
+## Overview of SHA-256
+
+The SHA-256 algorithm processes a variable-length input message and produces a fixed-size output hash value. The main steps in the SHA-256 algorithm are:
+
+1. Padding: The input message is padded so that its length is a multiple of 512 bits (64 bytes).
+2. Appending length: A 64-bit representation of the original message's length is appended to the padded message.
+3. Initializing hash values: Eight 32-bit hash values (a, b, c, d, e, f, g, h) are initialized with fixed constants.
+4. Processing the message in 512-bit blocks: The algorithm iterates through the padded and appended message in 512-bit blocks, updating the hash values using a series of operations and transformations involving non-linear functions, bitwise operations, and constants.
+5. Output: The final values of the eight hash values are concatenated to form the 256-bit hash value.
+
+The SHA-256 algorithm is designed to be a one-way function, meaning that it is computationally infeasible to find an input message that produces a given hash value (preimage resistance) or to find two different messages that produce the same hash value (collision resistance).
+
+## Applications of SHA-256
+
+SHA-256 is widely used in various applications, including:
+
+1. Digital signatures: SHA-256 is used in combination with other algorithms, such as ECDSA or RSA, to create digital signatures for verifying the authenticity and integrity of messages and documents.
+2. Password storage: SHA-256 is used to securely store passwords by hashing them before storing them in a database.
+3. Blockchain technology: SHA-256 is used in cryptocurrencies, such as Bitcoin, to secure transactions and create unique identifiers for blocks in the blockchain.
+4. Secure communication protocols: SHA-256 is used in secure communication protocols, such as TLS and SSL, to ensure the integrity of data transmitted over networks.
+5. File integrity checks: SHA-256 is used to verify the integrity of files by comparing their computed hash values against known good values.
+
+The widespread adoption of SHA-256 is due to its strong security properties and resistance to known attacks.
+
+## Security of SHA-256
+
+As of 2021, there are no known practical attacks that can break the security of SHA-256. The security of SHA-256 is based on the following properties:
+
+1. Preimage resistance: Given a hash value, it is computationally infeasible to find an input message that produces that hash value.
+2. Second preimage resistance: Given an input message, it is computationally infeasible to find another message that produces the same hash value.
+3. Collision resistance: It is computationally infeasible to find two different messages that produce the same hash value.
+
+The best-known theoretical attack against SHA-256 is the generic birthday attack, which has a complexity of about 2^128 operations, making it impractical with current computing capabilities.
+
+## Conclusion
+
+SHA-256 is a widely used and secure cryptographic hash function that produces a 256-bit hash value from an arbitrary-length input message. Its strong security properties, including preimage resistance, second preimage resistance, and collision resistance, make it suitable for various security-critical applications, such as digital signatures, password storage, blockchain technology, and secure communication protocols. As of 2021, there are no known practical attacks that can break the security of SHA-256, making it a reliable choice for ensuring the integrity and authenticity of data in modern cryptographic systems and applications.

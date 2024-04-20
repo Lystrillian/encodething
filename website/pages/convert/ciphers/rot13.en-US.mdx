@@ -1,0 +1,34 @@
+---
+title: 'ROT13 Cipher'
+description: 'знайте, как использовать Encodething для шифрования и дешифрования ROT13'
+keywords: ['ROT13 Cipher', 'ROT13', 'Cipher', 'Encryption', 'Decryption', 'Encodething']
+author: 'Lystrillian'
+created: 2024-03-31T16:31:12 (UTC +03:00)
+updated: 2024-03-31T16:31:14 (UTC +03:00)
+---
+
+<Callout type="warning">
+  Документы находятся в стадии разработки
+</Callout>
+
+### О ROT13
+
+ROT13 - один из шифров с одинарной транслитерацией, который шифрует путем замены символов в тексте на другие.
+
+Замена символов осуществляется путем сдвига символов от "A" до "Z" на 13 символов из 26 символов "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
+
+Например, "A" зашифрован в "N", а "Z" - в "M".
+
+```
+Простой текст : ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Шифрованный текст: NOPQRSTUVWXYZABCDEFGHIJKLM
+```
+
+```
+Простой текст : ЭТО СЕКРЕТНОЕ СООБЩЕНИЕ
+Шифрованный текст: GUVF VF N FRPERG ZRFFNTR
+```
+
+Поскольку существует взаимность, что открытый текст может быть получен путем повторного шифрования шифротекста, дешифрование может быть выполнено в том же потоке, что и шифрование.
+
+import { Callout } from 'nextra-theme-docs'

@@ -1,0 +1,7 @@
+{
+  "ctime": "Ctime Date",
+  "iso8601": "ISO8601 Date",
+  "unix-times": "Unix Times",
+  "rfc2822": "RFC2822 Date",
+  "w3c-dtf": "W3C-DTF Date"
+}

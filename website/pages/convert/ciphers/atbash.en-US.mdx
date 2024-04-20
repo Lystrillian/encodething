@@ -1,0 +1,53 @@
+---
+title: 'Atbash Cipher' 
+description: 'Learn how to use Encodething for Atbash Cipher encryption and decryption'
+keywords: ['Atbash Cipher', 'Atbash', 'Cipher', 'Encryption', 'Decryption', 'Encodething']
+author: 'Lystrillian'
+created: 2024-03-31T16:31:12 (UTC +03:00)
+updated: 2024-03-31T16:31:14 (UTC +03:00)
+---
+
+<Callout type="warning">
+  The Docs are Under Construction
+</Callout>
+
+## About Atbash Cipher
+
+Atbash cipher is one of the single transliteration ciphers that encrypts by replacing the characters in the text with other characters.
+
+Character replacement is done by mapping the list of characters in reverse order.
+
+For example, in the alphabet "ABCDEFGHIJKLMNOPQRSTUVWXYZ", "A" is encrypted to "Z" and "B" to "Y".
+
+```
+Plain : ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Cipher: ZYXWVUTSRQPONMLKJIHGFEDCBA
+```
+
+```
+Plain text : THIS IS A SECRET MESSAGE
+Cipher text: GSRH RH Z HVXIVG NVHHZTV
+```
+
+It was originally used as a Hebrew cipher. The Hebrew encryption is as follows.
+
+```
+Plain : אבגדהוזחטיכלמנסעפצקרשת
+Cipher: תשרקצפעסנמלכיטחזוהדגבא
+```
+
+Since there is reciprocity that plaintext can be obtained by encrypting ciphertext again, decryption can be done in the same flow as encryption.
+
+## Other language support
+
+In addition to Latin and Hebrew letters, Cyrillic and Japanese Hiragana / Katakana are supported.
+
+#### Cyrillic
+
+```
+Plain : АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
+Cipher: ЯЮЭЬЫЪЩШЧЦХФУТСРПОНМЛКЙИЗЖЕДГВБА
+```
+
+
+import { Callout } from 'nextra-theme-docs'

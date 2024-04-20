@@ -1,0 +1,77 @@
+---
+title: 'Base32'
+description: 'Learn how to use Encodething for Base32 conversions'
+keywords: ['Base32', 'Base32', 'String', 'Convert', 'Conversion', 'Encodething']
+author: 'Lystrillian'
+created: 2024-03-31T16:24:14 (UTC +03:00)
+updated: 2024-03-31T16:24:14 (UTC +03:00)
+---
+
+## About Base32
+
+Base32 is an encoding method that uses printable ASCII characters.
+
+In Base32, data is divided into 5 bits and converted into alphanumeric characters (A-Z, 2-7). Converts every 8 characters, and if the last is less than 8 characters, pad with the equal symbol (=).
+
+The conversion table for Base32 characters is as follows.
+
+| 5-bit data | Base32 character |
+| --- | --- |
+| 00000 | A |
+| 00001 | B |
+| 00010 | C |
+| 00011 | D |
+| 00100 | E |
+| 00101 | F |
+| 00110 | G |
+| 00111 | H |
+| 01000 | I |
+| 01001 | J |
+| 01010 | K |
+| 01011 | L |
+| 01100 | M |
+| 01101 | N |
+| 01110 | O |
+| 01111 | P |
+| 10000 | Q |
+| 10001 | R |
+| 10010 | S |
+| 10011 | T |
+| 10100 | U |
+| 10101 | V |
+| 10110 | W |
+| 10111 | X |
+| 11000 | Y |
+| 11001 | Z |
+| 11010 | 2 |
+| 11011 | 3 |
+| 11100 | 4 |
+| 11101 | 5 |
+| 11110 | 6 |
+| 11111 | 7 |
+
+For example, if you convert "Hello!" with Base32, it will be as follows.
+
+1\. Make it a binary representation.
+
+```
+01001000 01100101 01101100 01101100 01101111 00100001  (For US-ASCII / UTF-8)
+```
+
+2\. Separate every 5 bits. If it is less than 5 bits, pad it with "0" at the end.
+
+```
+01001 00001 10010 10110 11000 11011 00011 01111 00100 00100
+```
+
+3\. Convert to characters using a conversion table. Convert every 8 characters, and if it is less than 8 characters, pad the end with "=".
+
+```
+JBSWY3DP EE======
+```
+
+4\. Connect all the characters to get the Base32 conversion result.
+
+```
+JBSWY3DPEE======
+```

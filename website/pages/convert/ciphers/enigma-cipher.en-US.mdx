@@ -1,0 +1,219 @@
+---
+title: 'Enigma Cipher'
+description: 'Learn how to use Encodething for Enigma Cipher encryption and decryption'
+keywords: ['Enigma Cipher', 'Enigma', 'Cipher', 'Encryption', 'Decryption', 'Encodething']
+author: 'Lystrillian'
+created: 2024-03-31T16:31:12 (UTC +03:00)
+updated: 2024-03-31T16:31:14 (UTC +03:00)
+---
+
+<Callout type="warning">
+  The Docs are Under Construction
+</Callout>
+
+## About the Enigma Cipher
+
+The Enigma cipher is a type of commutative cipher that encrypts letters by replacing them with other letters. It supports encryption of 26 characters from "A" to "Z".
+
+Character substitution is done using the Enigma cipher machine, and Encodething supports the following Enigma machine simulations
+
+-   Enigma I
+-   Enigma M3
+-   Enigma M4 (U-boat Enigma)
+-   Norway Enigma "Norenigma"
+-   Sondermaschine (Special machine)
+-   Enigma G "Zählwerk Enigma" (A28/G31)
+-   Enigma G G-312 (G31 Abwehr Enigma)
+-   Enigma G G-260 (G31 Abwehr Enigma)
+-   Enigma G G-111 (G31 Hungarian Enigma)
+-   Enigma D (Commercial Enigma A26)
+-   Enigma K (Commercial Enigma A27)
+-   Enigma KD (Enigma K with UKW-D)
+-   Swiss-K (Swiss Enigma K variant)
+-   Railway Enigma "Rocket I"
+-   Enigma T "Tirpitz" (Japanese Enigma)
+-   Spanish Enigma, wiring D
+-   Spanish Enigma, wiring F
+-   Spanish Enigma, Delta (A 16081)
+-   Spanish Enigma, Sonderschaltung / Delta (A 16101)
+
+The Enigma machine consists of the following components. Characters entered from the keyboard (Tastatur) pass through a plugboard (Steckerbrett), an entry wheel (ETW, Eintrittswalze), three or four rotors (Walze), a reflector (UKW, Umkehrwalze), and then the reverse. The encrypted result is displayed on the lamp board (Lampenfeld). Lettering is performed at all locations, including the rotor.
+
+```
+ UKW   Walze  Walze  Walze   ETW  (Stecker)
+         3      2      1
+ ___    ___    ___    ___    ___    ___
+|   |  |   |  |   |  |   |  |   |  |   |
+|  -|--|---|--|---|--|---|--|---|--|---|-- &lt; Tastatur
+| | |  |   |  |   |  |   |  |   |  |   |
+| | |  |   |  |   |  |   |  |   |  |   |
+|  -|--|---|--|---|--|---|--|---|--|---|-- &gt; Lampenfeld
+|   |  |   |  |   |  |   |  |   |  |   |
+ ---    ---    ---    ---    ---    ---
+```
+
+The entry wheels, rotors, and reflectors are wired internally to convert the 26 letters from "A" to "Z" into other letters, and the conversion is done when the wires are energized. For example, the rotor "I" of Enigma I is wired as shown below, and the letter "A" is converted to "E". For example, the rotor "I" of Enigma I is wired as follows: the letter "A" is converted to "E", and the letter "J" coming back from the reflector is converted to "Z" by following the reverse wiring.
+
+```
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+||||||||||||||||||||||||||
+EKMFLGDQVZNTOWYHXUSPAIBRCJ
+```
+
+All wiring for Enigma I is as follows.
+
+| Wheel | ABCDEFGHIJKLMNOPQRSTUVWXYZ |
+| --- | --- |
+| ETW | ABCDEFGHIJKLMNOPQRSTUVWXYZ |
+| I | EKMFLGDQVZNTOWYHXUSPAIBRCJ |
+| II | AJDKSIRUXBLHWTMCQGZNPYFVOE |
+| III | BDFHJLCPRTXVZNYEIWGAKMUSQO |
+| IV | ESOVPZJAYQUIRHXLNFTGKDCMWB |
+| V | VZBRGITYUPSDNHLXAWMJQOFECK |
+| UKW-A | EJMZALYXVBWFCRQUONTSPIKHGD |
+| UKW-B | YRUHQSLDPXNGOKMIEBFZCWVJAT |
+| UKW-C | FVPJIAOYEDRZXWGCTKUQSBNMHL |
+
+The plugboard is a mechanism that allows the transliteration to be wired by the user. In some Enigma machines, there is a plugboard at the front of the ETW. The plugboard has input and output terminals for 26 alphabets, from "A" to "Z." By connecting any two alphabets with a cable, the two characters can be converted. For example, if you connect "A" and "M" with a cable, "A" will be converted to "M" and "M" to "A". The characters of the input and output terminals that are not wired with cables will not be converted.
+
+When you enter a character from the keyboard, the rotor rotates one step. The rotation of the rotor starts with the rotor on the right side, and when it reaches the notch on the rotor, the rotor on the left side also rotates by one step. This rotation of the rotor changes the wiring for encryption for each character, so even if you enter the same character, it will be converted to a different character from the previous one.
+
+The rotor has a ring, with the letters "A" through "Z" (or "01" through "26") engraved on the outer circumference of the ring. The ring can be set to 26 different offsets between the letter on its periphery and the wiring inside the rotor. For example, in the case of the "I" rotor of the Enigma I, if the ring setting is "A (01)", the "A" will be converted to an "E", but if the ring setting is "B (02)", the "A" will be converted to a "K" as the original Z-J wiring because the internal wiring is shifted by one.
+
+```
+Ring: A (01)
+ABCDEFGHIJKLMNOPQRSTUVWXYZ
+||||||||||||||||||||||||||
+EKMFLGDQVZNTOWYHXUSPAIBRCJ
+
+Ring: B (02)
+BCDEFGHIJKLMNOPQRSTUVWXYZA
+||||||||||||||||||||||||||
+FLNGMHERWAOUPXZIYVTQBJCSDK
+```
+
+Rotors can be set in order and initial position of rotation. For example, if there are three types of rotors, "I", "II", and "III", they can be set in the Enigma machine in the order "II", "I", and "III", and the initial position of each rotor can be set between "A (01)" and "Z (26)". Reflectors are also interchangeable among several types of reflectors with different wiring, and some Enigma machines can be set to an initial position. The entry wheel is fixed and cannot be changed. For Enigma machines that have plugboards, the plugboard can also be set. These settings are the key to encryption by the Enigma machine.
+
+An example of encryption with Enigma I is shown below.
+
+```
+Wheel order     : UKW-A II I III
+Ring setting    : X M V  (24 13 22)
+Position setting: A B L  (01 02 12)
+Plugboard       : AM FI NV PS TU WZ
+
+Text before encryption: SECRET
+Text after encryption : LCGODU
+```
+
+In this case, the first letter "S" will be converted into the following sequence, and finally encrypted into "L".
+
+```
+S -&gt; P  : Plugboard
+P -&gt; P  : ETW
+P -&gt; L  : III
+L -&gt; P  : I
+P -&gt; W  : II
+W -&gt; K  : UKW-A
+K -&gt; Q  : II
+Q -&gt; O  : I
+O -&gt; L  : III
+L -&gt; L  : ETW
+L -&gt; L  : Plugboard
+```
+
+The rotational position of the rotor and the input (+) / output (-) positions are represented by the letters on the ring as shown below. (Since the rotor is rotating, the above "transcribed characters" and "characters as positions on the ring" are different.)
+
+```
+           -      +       
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  : Plugboard
+           -   +          
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  : ETW
+           -   +          
+MNOPQRSTUVWXYZABCDEFGHIJKL  : III
+           +  -           
+BCDEFGHIJKLMNOPQRSTUVWXYZA  : I
+               +-         
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  : II
+          -           +   
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  : UKW-A
+```
+
+The Enigma machine has a feature that if you encrypt an encrypted text again with the same settings, you will get the plain text before encryption. Therefore, inputting the encrypted "L" in the above example will yield the original "S".
+
+```
+L -&gt; L  : Plugboard
+L -&gt; L  : ETW
+L -&gt; O  : III
+O -&gt; Q  : I
+Q -&gt; K  : II
+K -&gt; W  : UKW-A
+W -&gt; P  : II
+P -&gt; L  : I
+L -&gt; P  : III
+P -&gt; P  : ETW
+P -&gt; S  : Plugboard
+```
+
+```
+           +      -       
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  : Plugboard
+           +   -          
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  : ETW
+           +   -          
+MNOPQRSTUVWXYZABCDEFGHIJKL  : III
+           -  +           
+BCDEFGHIJKLMNOPQRSTUVWXYZA  : I
+               -+         
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  : II
+          +           -   
+ABCDEFGHIJKLMNOPQRSTUVWXYZ  : UKW-A
+```
+
+## Setting items in Encodething
+
+### Wheel order (Walzenlage)
+
+Set the type of reflector and rotor, and the order of the rotors.
+
+Since the input is from the right side of the Enigma machine, the rotors are counted from the right rotor as 1, 2, 3, and so on, but when describing the wheel order settings, they are generally written in order from left to right. For example, a wheel order of "UKW-A II I III" indicates the settings of rotor 1 "III", rotor 2 "I", rotor 3 "II", and the reflector "UKW-A".
+
+Normally, there is one reflector and three rotors for a total of four, but the Enigma M4 can be configured with a "thin reflector" and a "thin rotor" in the reflector slot. In Encodething, the "thin reflector" is treated like a normal reflector, and the "thin rotor" (Beta, Gamma) is additionally displayed as rotor 4, for a total of 5 settings. However, if the reflector is UKW-D, Rotor 4 cannot be set because it occupies the reflector slot.
+
+### Ring setting (Ringstellung)
+
+Set the ring of the rotor. This setting changes the position of the rotor's internal wiring relative to the ring. On some Enigma machines, the reflector can also be set to ring.
+
+### Position setting (Grundstellung)
+
+Set the initial position of the rotor. On some Enigma machines, the reflector can also be set to its initial position.
+
+It is sometimes called the "Message key" because it was set differently for each message.
+
+### Plugboard wiring (Steckerverbindungen)
+
+Set up the wiring pairs for the plugboard.
+
+In Encodething, wiring is specified by enumerating pairs of two characters to be converted, such as "AB CD EF GH IJ KL", separated by a space. In this example, the pairs are "A" and "B", "C" and "D", and so on.
+
+### Uhr
+
+Uhr is an accessory that connects to a plugboard and selects wiring from 40 ways from "00" to "39". The plugboard and Uhr are connected by 20 cables. When the Uhr is set to "00", that pair of cables is equal to the one wired directly on the plugboard.
+
+Uhr can only be set for Enigma I. Uhr can be set by first specifying 10 sets of wiring pairs on the plugboard.
+
+### UKW-D wiring
+
+UKW-D is a reflector with changeable internal wiring.
+
+The normal notation for reflector rings is "ABCDEFGHIJKLMNOPQRSTUVWXYZ", but UKW-D's notation is in a special order, "A-ZXWVUTSRQPON-MLKIHGFEDCB". The two "-" (BO in normal notation) in the notation are fixed and always wired to each other and cannot be changed. The other 24 characters and 12 pairs of wires are set.
+
+```
+UKW-D notation : A-ZXWVUTSRQPON-MLKIHGFEDCB
+Normal notation: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+```
+
+UKW-D can be set for Enigma I, Enigma M4, and Enigma KD.
+
+
+import { Callout } from 'nextra-theme-docs'

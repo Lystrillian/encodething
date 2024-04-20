@@ -1,0 +1,49 @@
+---
+title: 'Caesar Cipher'
+description: 'Learn how to use Encodething for Caesar Cipher encryption and decryption'
+keywords: ['Caesar Cipher', 'Caesar', 'Cipher', 'Encryption', 'Decryption', 'Encodething']
+author: 'Lystrillian'
+created: 2024-03-31T16:31:12 (UTC +03:00)
+updated: 2024-03-31T16:31:14 (UTC +03:00)
+---
+
+## About Caesar Cipher
+
+Caesar cipher is one of the single transliteration ciphers that encrypts by replacing the characters in the text with other characters.
+
+Character replacement is performed by shifting the characters from "A" to "Z" among the 26 characters of "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
+
+For example, when shifting -3 characters, "A" is encrypted to "X" and "Z" is encrypted to "W".
+
+```
+Plain : ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Cipher: XYZABCDEFGHIJKLMNOPQRSTUVW
+```
+
+```
+Plain text : THIS IS A SECRET MESSAGE
+Cipher text: QEFP FP X PBZOBQ JBPPXDB
+```
+
+The number of shifts is the key to encryption.
+
+Only letters are encrypted, not numbers or symbols.
+
+If the number of shifts is 13, the result is the same as ROT13. 
+
+Shifts characters while retaining the diacritic mark. So, for example, "Á" is encrypted to "X́".
+
+## Other language support
+
+In addition to Latin letters, Cyrillic and Japanese Hiragana / Katakana are supported.
+
+#### Cyrillic
+
+If you want to shift the Cyrillic character by -3 characters, it will be encrypted as follows.
+
+```
+Plain : АБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ
+Cipher: ЭЮЯАБВГДЕЖЗИЙКЛМНОПРСТУФХЦЧШЩЪЫЬ
+```
+
+The diacritic mark shifts the character while holding it. So, for example, the Russian letter "Ё" is encrypted to "В̈". The characters "Й" and "й" are treated as unique characters, not the characters "И" and "и" with the diacritical mark " ̆" (Breve).
