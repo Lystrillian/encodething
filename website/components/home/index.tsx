@@ -4,6 +4,7 @@ import BenefitsGrid from './benefits';
 import DescriptionGrid from './description';
 import { Hero } from './hero';
 import TailwindSection from './tailwind';
+import Textarea from '@components/Common/Textarea';
 
 export function Home(): JSX.Element {
   useEffect(() => {
@@ -21,7 +22,7 @@ export function Home(): JSX.Element {
     requestAnimationFrame(raf);
   });
   return (
-    <main className="font-overused space-y-40 mb-40">
+    <main className="font-overused">
       <Hero />
       <DescriptionGrid />
       <BenefitsGrid />
