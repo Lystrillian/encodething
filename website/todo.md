@@ -44,7 +44,7 @@
 
 ### Colors
 
-- Hex Colors - []
+- Hex Colors - [Ч]
 - HSL Colors - []
 - HSV Colors - []
 - LCH Colors - []
