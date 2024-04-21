@@ -11,24 +11,22 @@ updated: 2024-03-31T16:31:14 (UTC +03:00)
   Документы находятся в стадии разработки
 </Callout>
 
-### О ROT13
+### About ROT13
 
-ROT13 - один из шифров с одинарной транслитерацией, который шифрует путем замены символов в тексте на другие.
+ROT13 is a single-character substitution cipher that encrypts by replacing the characters in the text with other characters.
 
-Замена символов осуществляется путем сдвига символов от "A" до "Z" на 13 символов из 26 символов "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
-
-Например, "A" зашифрован в "N", а "Z" - в "M".
+The substitution is done by shifting the characters from "A" to "Z" by 13 characters out of the 26 characters of "ABCDEFGHIJKLMNOPQRSTUVWXYZ".
 
 ```
-Простой текст : ABCDEFGHIJKLMNOPQRSTUVWXYZ
-Шифрованный текст: NOPQRSTUVWXYZABCDEFGHIJKLM
+Plain Text: ABCDEFGHIJKLMNOPQRSTUVWXYZ
+Cipher Text: NOPQRSTUVWXYZABCDEFGHIJKLM
 ```
 
 ```
-Простой текст : ЭТО СЕКРЕТНОЕ СООБЩЕНИЕ
-Шифрованный текст: GUVF VF N FRPERG ZRFFNTR
+Plain Text : ЭТО СЕКРЕТНОЕ СООБЩЕНИЕ
+Cipher Text: GUVF VF N FRPERG ZRFFNTR
 ```
 
-Поскольку существует взаимность, что открытый текст может быть получен путем повторного шифрования шифротекста, дешифрование может быть выполнено в том же потоке, что и шифрование.
+Because there is reciprocity that plaintext can be obtained by encrypting ciphertext again, decryption can be done in the same flow as encryption.
 
 import { Callout } from 'nextra-theme-docs'
