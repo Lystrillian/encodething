@@ -21,7 +21,7 @@
 - Naming Conventions - [X]
 - Program String - [X]
 - Quoted-printable - [X]
-- Text Initials - []
+- Text Initials - [X]
 - Text Reverse - []
 - Unicode Escape - [X]
 - Unicode Normalization - [X]
