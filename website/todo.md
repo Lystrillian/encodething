@@ -15,7 +15,7 @@
 - Hex String - [X]
 - HTML Escape - [X]
 - Letter Case - [X]
-- Line Sort - []
+- Line Sort - [X]
 - Line Unique - []
 - Morse Code - []
 - Naming Conventions - [X]

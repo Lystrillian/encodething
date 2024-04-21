@@ -1,0 +1,96 @@
+---
+title: 'Line Sort'
+description: 'Sorts a string by line.'
+keywords: ['Line Sort', 'Line Sort', 'String', 'Sort', 'Sorting', 'Encodething']
+author: 'Lystrillian'
+created: 2024-03-31T17:12:14 (UTC +03:00)
+updated: 2024-03-31T17:12:15 (UTC +03:00)
+---
+
+## About Line Sort
+
+Line Sort is a string sorting algorithm that sorts a string by lines. It is commonly used in text processing and data analysis applications to organize and manipulate text data.
+
+The algorithm works by splitting the input string into lines, sorting each line individually, and then joining the sorted lines back together. The sorted string is then returned.
+
+## Usage
+
+Line Sort is a utility function that can be used to sort a string by lines. Here's an example of how to use it:
+
+```
+INPUT:
+This
+is
+a
+string.
+
+
+OUTPUT:
+a
+is
+string.
+This
+```
+
+## Parameters
+
+### Ascending Order
+
+By default, Line Sort sorts the string in ascending order. If you want to sort the string in descending order, you can set the `ascending` parameter to `false`.
+
+```
+INPUT:
+this
+is
+a
+string
+
+
+OUTPUT:
+a
+is
+string
+this
+```
+
+### Descending Order
+
+If you want to sort the string in descending order, you can set the `descending` parameter to `true`.
+
+```
+INPUT:
+this
+is
+a
+string
+
+
+OUTPUT:
+this
+string
+is
+a
+```
+
+### Reverse Order
+
+If you want to sort the string in reverse order, you can set the `reverse` parameter to `true`.
+
+```
+INPUT:
+this
+is
+a
+string
+
+
+OUTPUT:
+string
+a
+is
+this
+```
+
+### Case Sensitivity
+
+By default, Line Sort is case-sensitive, meaning that it considers uppercase and lowercase letters as different. If you want to make the sorting case-insensitive, you can set the `caseSensitive` parameter to `false`.
