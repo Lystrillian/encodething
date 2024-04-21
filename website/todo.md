@@ -13,7 +13,7 @@
 - Bin String - [X]
 - Character Width - [X]
 - Hex String - [X]
-- HTML Escape - []
+- HTML Escape - [X]
 - Letter Case - []
 - Line Sort - []
 - Line Unique - []
