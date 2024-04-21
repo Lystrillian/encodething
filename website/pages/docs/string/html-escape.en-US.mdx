@@ -1,0 +1,462 @@
+---
+title: 'HTML Escape'
+description: 'Learn how to use Encodething for HTML Escape conversions'
+keywords: ['HTML Escape', 'HTML Escape', 'String', 'Convert', 'Conversion', 'Encodething']
+author: 'Lystrillian'
+---
+
+import { Table, TableHeader, TableRow, TableCell } from '@table';
+
+## About HTML escape
+
+<Table border="1">
+
+<tbody><TableRow>
+<TableHeader>
+Character(s)
+</TableHeader>
+<TableHeader>
+Literal(s)
+</TableHeader>
+<TableHeader>
+Alphanumeric value(s)
+</TableHeader>
+<TableHeader>
+Unicode value(s)
+</TableHeader>
+<TableHeader>
+Prefer to
+</TableHeader></TableRow>
+<TableRow>
+<TableHeader>
+Cent (currency)
+</TableHeader>
+<TableCell>
+¢
+</TableCell>
+<TableCell>
+<code>&amp;cent;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#162;</code>
+</TableCell>
+<TableCell>
+<code>&nbsp;</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Pound (currency)
+</TableHeader>
+<TableCell>
+£
+</TableCell>
+<TableCell>
+<code>&amp;pound;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#163;</code>
+</TableCell>
+<TableCell>
+<code>&nbsp;</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Section <sup>1</sup>
+</TableHeader>
+<TableCell>
+§
+</TableCell>
+<TableCell>
+<code>&amp;sect;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#167;</code>
+</TableCell>
+<TableCell>
+<code>&nbsp;</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Copyright
+</TableHeader>
+<TableCell>
+©
+</TableCell>
+<TableCell>
+<code>&amp;copy;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#169;</code>
+</TableCell>
+<TableCell>
+<code>
+(c)
+</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Guillemets <sup>2</sup>
+</TableHeader>
+<TableCell>
+«&nbsp;»
+</TableCell>
+<TableCell>
+<code>&amp;laquo; &amp;raquo;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#171; &amp;#187;</code>
+</TableCell>
+<TableCell>
+<code>&amp;quot;</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Registered trademark
+</TableHeader>
+<TableCell>
+®
+</TableCell>
+<TableCell>
+<code>&amp;reg;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#174;</code>
+</TableCell>
+<TableCell>
+<code>(R)</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Degree(s)
+</TableHeader>
+<TableCell>
+°
+</TableCell>
+<TableCell>
+<code>&amp;deg;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#176;</code>
+</TableCell>
+<TableCell>
+<code>&nbsp;</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Plus/minus
+</TableHeader>
+<TableCell>
+±
+</TableCell>
+<TableCell>
+<code>&amp;plusmn;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#177;</code>
+</TableCell>
+<TableCell>
+<code>+/-</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Pilcrow (paragraph) <sup>3</sup>
+</TableHeader>
+<TableCell>
+¶
+</TableCell>
+<TableCell>
+<code>&amp;para;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#182;</code>
+</TableCell>
+<TableCell>
+<code>&nbsp;</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Middle dot <sup>4</sup>
+</TableHeader>
+<TableCell>
+·
+</TableCell>
+<TableCell>
+<code>&amp;middot;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#183;</code>
+</TableCell>
+<TableCell>
+<code>&nbsp;</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Fractional half <sup>5</sup>
+</TableHeader>
+<TableCell>
+½
+</TableCell>
+<TableCell>
+<code>&amp;frac12;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#188;</code>
+</TableCell>
+<TableCell>
+<code>1/2</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+En dash <sup>6, 7</sup>
+</TableHeader>
+<TableCell>
+–
+</TableCell>
+<TableCell>
+<code>&amp;ndash;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#8211;</code>
+</TableCell>
+<TableCell>
+<code>-</code> for ranges
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Em (long) dash <sup>7, 8</sup>
+</TableHeader>
+<TableCell>
+—
+</TableCell>
+<TableCell>
+<code>&amp;mdash;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#8212;</code>
+</TableCell>
+<TableCell>
+<code>-</code> enclosed by spaces, or <code>--</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Single quotes <sup>9, 10</sup>
+</TableHeader>
+<TableCell>
+‘ ’
+</TableCell>
+<TableCell>
+<code>&amp;lsquo; &amp;rsquo;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#8216; &amp;#8217;</code>
+</TableCell>
+<TableCell>
+<code>'</code> or <code>&amp;apos;</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Single low quote <sup>11</sup>
+</TableHeader>
+<TableCell>
+‚
+</TableCell>
+<TableCell>
+<code>&amp;sbquo;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#8218;</code>
+</TableCell>
+<TableCell>
+<code>'</code> or comma
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Double quotes <sup>9</sup>
+</TableHeader>
+<TableCell>
+“ ”
+</TableCell>
+<TableCell>
+<code>&amp;ldquo; &amp;rdquo;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#8220; &amp;#8221;</code>
+</TableCell>
+<TableCell>
+<code>", &amp;quot;</code>, <code><i></i></code><i>, or <code>``</code></i>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Double low quote <sup>11</sup>
+</TableHeader>
+<TableCell>
+„
+</TableCell>
+<TableCell>
+<code>&amp;bdquo;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#8222;</code>
+</TableCell>
+<TableCell>
+<code>&amp;quot;</code> or <code>,,</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Single &amp; double daggers
+</TableHeader>
+<TableCell>
+† ‡
+</TableCell>
+<TableCell>
+<code>&amp;dagger; &amp;Dagger;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#8224; &amp;#8225;</code>
+</TableCell>
+<TableCell>
+<code>*</code> and <code>**</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Bullet
+</TableHeader>
+<TableCell>
+•
+</TableCell>
+<TableCell>
+<code>&amp;bull;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#8226;</code>
+</TableCell>
+<TableCell>
+<code>*</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Ellipsis <sup>12</sup>
+</TableHeader>
+<TableCell>
+…
+</TableCell>
+<TableCell>
+<code>&amp;hellip;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#8230;</code>
+</TableCell>
+<TableCell>
+<code>...</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Prime &amp; double prime <sup>13</sup>
+</TableHeader>
+<TableCell>
+′ ″
+</TableCell>
+<TableCell>
+<code>&amp;prime; &amp;Prime;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#8242; &amp;#8243;</code>
+</TableCell>
+<TableCell>
+<code>'</code>, <code><i></i></code><i>, <code>&amp;apos;</code>, <code>&amp;quot;</code>, <code>minutes:seconds</code> elapsed</i>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Euro sign
+</TableHeader>
+<TableCell>
+€
+</TableCell>
+<TableCell>
+<code>&amp;euro;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#8364;</code>
+</TableCell>
+<TableCell>
+<code>&nbsp;</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Trademark
+</TableHeader>
+<TableCell>
+™
+</TableCell>
+<TableCell>
+<code>&amp;trade;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#8482;</code>
+</TableCell>
+<TableCell>
+<code>(tm)</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Almost equal to
+</TableHeader>
+<TableCell>
+≈
+</TableCell>
+<TableCell>
+<code>&amp;asymp;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#8776;</code>
+</TableCell>
+<TableCell>
+<code>~</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Not equal to
+</TableHeader>
+<TableCell>
+≠
+</TableCell>
+<TableCell>
+<code>&amp;ne;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#8800;</code>
+</TableCell>
+<TableCell>
+<code>!=</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Less/greater than or equal to
+</TableHeader>
+<TableCell>
+≤ ≥
+</TableCell>
+<TableCell>
+<code>&amp;le; &amp;ge;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#8804; &amp;#8805;</code>
+</TableCell>
+<TableCell>
+<code>&lt;= or &gt;=</code>
+</TableCell></TableRow>
+<TableRow>
+<TableHeader>
+Less/greater than
+</TableHeader>
+<TableCell>
+&lt; &gt;
+</TableCell>
+<TableCell>
+<code>&amp;lt; &amp;gt;</code>
+</TableCell>
+<TableCell>
+<code>&amp;#062; &amp;#060;</code>
+</TableCell>
+<TableCell>
+</TableCell></TableRow></tbody></Table>
