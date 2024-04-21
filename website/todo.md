@@ -16,7 +16,7 @@
 - HTML Escape - [X]
 - Letter Case - [X]
 - Line Sort - [X]
-- Line Unique - []
+- Line Unique - [X]
 - Morse Code - [X]
 - Naming Conventions - [X]
 - Program String - [X]
