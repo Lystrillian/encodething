@@ -5,12 +5,19 @@ keywords: ['HTML Escape', 'HTML Escape', 'String', 'Convert', 'Conversion', 'Enc
 author: 'Lystrillian'
 ---
 
-import { Table, TableHeader, TableRow, TableCell } from '@table';
+import { Table, TableHeader, TableRow, TableCell, TableCaption } from '@table';
 
 ## About HTML escape
 
-<Table border="1">
+HTML Escape is the process of converting special characters in HTML into their corresponding HTML entities. This is useful when you need to display text in a web page that contains special characters.
 
+HTML entities are represented as `&entity;` or `&#decimal;` or `&#hex;`. The entity can be a named entity (e.g., `&amp;`) or a numeric entity (e.g., `&#38;`).
+
+HTML Escape is necessary because some characters have special meanings in HTML. For example, `<` and `>` are used to define HTML tags. If these characters appear in the text, they can cause unexpected behavior.
+
+## HTML Escape table
+
+<Table border="1">
 <tbody><TableRow>
 <TableHeader>
 Character(s)
@@ -89,9 +96,7 @@ Copyright
 <code>&amp;#169;</code>
 </TableCell>
 <TableCell>
-<code>
-(c)
-</code>
+<code>(c)</code>
 </TableCell></TableRow>
 <TableRow>
 <TableHeader>
