@@ -1,14 +1,31 @@
 ---
-title: 'Ctime Date' 
+title: 'Ctime Date'
 description: 'Learn how to use Encodething for Ctime Date conversions'
 keywords: ['Ctime Date', 'Ctime', 'Date', 'Convert', 'Conversion', 'Encodething']
 author: 'Lystrillian'
 created: 2024-03-31T16:29:29 (UTC +03:00)
-updated: 2024-03-31T16:29:30 (UTC +03:00) 
+updated: 2024-03-31T16:29:30 (UTC +03:00)
 ---
 
-<Callout type="warning">
-This section is in an active stage of development.
-</Callout>
+## About Ctime Date
 
-import { Callout } from 'nextra-theme-docs'
+ctime is a date and time notation format returned by the C language ctime() function.
+
+The ctime() function returns a string that represents the current time in the format specified by the locale. The format of the string is implementation-defined, but it is guaranteed to contain at least the following elements:
+
+- The year, month, and day of the month, separated by a single space.
+- The hour, minute, and second of the day, separated by a single space.
+- The time zone, if any, separated by a single space.
+
+The ctime() function is not part of the C standard library, but it is widely available on Unix-like systems and is commonly used in C programs to display the current time in a human-readable format.
+
+## Usage
+
+To use the ctime() function in your C program, you need to include the appropriate header file and call the function with the desired format string. The format string specifies the format of the output string, which can be customized to suit your needs.
+
+Here's an example of how to use the ctime() function in a C program:
+
+```
+INPUT: ctime("%c")
+OUTPUT: Sun Apr 21 20:23:45 2023
+```
