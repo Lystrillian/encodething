@@ -1,7 +1,7 @@
 import * as React from 'react';
 import Link from 'next/link';
 import { ExternalLinkIcon } from '../Icon';
-import { cn } from 'lib/utils';
+import { cn } from '../../../lib/utils';
 import styles from './index.module.css';
 
 export interface CustomLinkProps

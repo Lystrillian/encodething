@@ -6,7 +6,7 @@ import {
   CancelledDotIcon,
   QueuedDotIcon,
 } from '../Icon';
-import { cn } from 'lib/utils';
+import { cn } from '../../../lib/utils';
 import styles from './index.module.css';
 
 export type StatusDotStatus =
