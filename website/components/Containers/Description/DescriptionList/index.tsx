@@ -1,5 +1,6 @@
 import * as React from 'react'
 import DescriptionItem from '../DescriptionItem'
+import styles from './index.module.css'
 
 interface DescriptionListProps extends React.HTMLAttributes<HTMLDivElement> {
   items: React.ReactNode[]
@@ -10,7 +11,7 @@ const DescriptionList = React.forwardRef<HTMLDivElement, DescriptionListProps>(
     return (
       <div
         ref={ref}
-        className={`flex flex-wrap justify-center gap-4 mx-auto mt-3 ${className}`}
+        className={`${styles.b} ${className}`}
         {...props}
       >
         {items.map((item, index) => (
