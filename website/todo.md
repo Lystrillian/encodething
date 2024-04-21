@@ -22,7 +22,7 @@
 - Program String - [X]
 - Quoted-printable - [X]
 - Text Initials - [X]
-- Text Reverse - []
+- Text Reverse - [X]
 - Unicode Escape - [X]
 - Unicode Normalization - [X]
 
