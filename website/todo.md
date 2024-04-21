@@ -17,7 +17,7 @@
 - Letter Case - [X]
 - Line Sort - [X]
 - Line Unique - []
-- Morse Code - []
+- Morse Code - [X]
 - Naming Conventions - [X]
 - Program String - [X]
 - Quoted-printable - [X]
