@@ -1,6 +1,6 @@
 // <reference types="@playwright/test" />
 import { test, expect } from '@playwright/experimental-ct-react';
-import { Table, TableBody, TableCell, TableHeader, TableRow, TableCaption, TableHead } from './index';
+import { Table, TableBody, TableCell, TableHeader, TableRow, TableCaption, TableHead } from './table';
 
 test.use({ viewport: { width: 500, height: 500 } });
 

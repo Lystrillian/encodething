@@ -1,6 +1,6 @@
 // <reference types="@playwright/test" />
 import { test, expect } from '@playwright/experimental-ct-react';
-import Textarea from './index';
+import Textarea from './textarea';
 
 test.use({ viewport: { width: 500, height: 500 } });
 

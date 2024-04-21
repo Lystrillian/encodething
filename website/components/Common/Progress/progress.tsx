@@ -1,6 +1,6 @@
 import React from 'react';
 import { cva, VariantProps } from 'class-variance-authority';
-import styles from './index.module.css';
+import styles from './progress.module.css';
 
 const progressBarStyles = cva(
   'w-fit h-2 rounded-md bg-ds-gray-1000 overflow-hidden',

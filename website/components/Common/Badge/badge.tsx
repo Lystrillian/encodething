@@ -1,6 +1,6 @@
 import * as React from 'react';
-import { cn } from 'lib/utils';
-import { FallbackIcon } from '../Icon';
+import { cn } from '../../../lib/utils';
+import { FallbackIcon } from '../Icon/icons';
 
 const badgeVariants = {
   gray: 'bg-ds-gray-700 text-ds-background-100',

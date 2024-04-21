@@ -1,6 +1,6 @@
 // <reference types="@playwright/test" />
 import { test, expect } from '@playwright/experimental-ct-react';
-import { Typography } from './index';
+import { Typography } from './typography';
 
 test.use({ viewport: { width: 500, height: 500 } });
 

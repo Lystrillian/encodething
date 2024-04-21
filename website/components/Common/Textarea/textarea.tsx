@@ -1,8 +1,6 @@
   import React, { ChangeEvent, CSSProperties, TextareaHTMLAttributes, useEffect, useRef } from 'react';
   import { cn } from '../../../lib/utils';
-  import styles from './index.module.css';
-  import { StatusDot } from '../StatusDot';
-
+  import styles from './textarea.module.css';
 
   interface TextareaProps extends TextareaHTMLAttributes<HTMLTextAreaElement> {
     value?: string;

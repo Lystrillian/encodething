@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/experimental-ct-react';
-import { StatusDot } from './index';
+import { StatusDot } from './status-dot';
 
 test('should render StatusDot component with default variant and tag', async ({ mount }) => {
   const component = await mount(<StatusDot />);

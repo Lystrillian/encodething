@@ -1,7 +1,7 @@
-import { DescriptionIcon } from '../Icon';
-import styles from './index.module.css';
+import { DescriptionIcon } from '../Icon/icons';
+import styles from './description.module.css';
 import * as React from 'react';
-import { cn } from 'lib/utils';
+import { cn } from '../../../lib/utils';
 
 export interface DescriptionProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string;

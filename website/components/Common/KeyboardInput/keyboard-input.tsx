@@ -1,4 +1,4 @@
-import styles from './index.module.css';
+import styles from './keyboard-input.module.css';
 
 export default function KeyboardInput({ key }: { key: string }) {
   return (

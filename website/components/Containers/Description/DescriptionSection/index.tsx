@@ -2,7 +2,7 @@ import DescriptionList from "../DescriptionList";
 import * as React from 'react'
 import { cn } from '@utils'
 import styles from './index.module.css';
-import { Typography } from '@typography';
+import { Typography } from '@components/Common/Typography/typography';
 
 interface DescriptionSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string

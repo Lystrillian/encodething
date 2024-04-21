@@ -1,4 +1,4 @@
-import { Typography } from '@typography'
+import { Typography } from '@components/Common/Typography/typography'
 import styles from './index.module.css'
 
 export function FeatureItem({ title, description }: { title: React.ReactNode, description: React.ReactNode }) {
