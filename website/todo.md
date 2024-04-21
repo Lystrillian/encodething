@@ -46,10 +46,10 @@
 
 - Hex Colors - [X]
 - HSL Colors - [X]
-- HSV Colors - []
-- LCH Colors - []
-- OkLCH Colors - []
-- RGB Colors - []
+- HSV Colors - [X]
+- LCH Colors - [X]
+- OkLCH Colors - [X]
+- RGB Colors - [X]
 
 ### Cipher
 
