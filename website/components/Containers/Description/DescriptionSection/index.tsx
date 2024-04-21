@@ -1,6 +1,8 @@
 import DescriptionList from "../DescriptionList";
 import * as React from 'react'
 import { cn } from '@utils'
+import styles from './index.module.css';
+import { Typography } from '@typography';
 
 interface DescriptionSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   title: string
@@ -15,17 +17,18 @@ const DescriptionSection = React.forwardRef<
     <div
       ref={ref}
       className={cn(
-        'shadow-[0_0_0_1px_rgba(255,255,255,0.14)]',
+        styles.a,
         className
       )}
       {...props}
     >
-      <h2
-        className="text-center font-semibold text-ds-gray-900 tracking-[-0.05em]"
+      <Typography
+        variant="h2"
+        className={styles.b}
         style={{ fontSize: 'clamp(1.5rem, 1.357rem + 0.71vw, 2.25rem)' }}
       >
         {title}
-      </h2>
+      </Typography>
       <DescriptionList items={items} />
     </div>
   )
