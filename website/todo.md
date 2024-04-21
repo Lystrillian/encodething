@@ -14,7 +14,7 @@
 - Character Width - [X]
 - Hex String - [X]
 - HTML Escape - [X]
-- Letter Case - []
+- Letter Case - [X]
 - Line Sort - []
 - Line Unique - []
 - Morse Code - []
