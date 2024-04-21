@@ -12,3 +12,32 @@ updated: 2024-03-31T17:12:15 (UTC +03:00)
 Quoted-printable is an encoding method that uses 7-bit printable ASCII characters. Used to transfer 8-bit data in a 7-bit data path in email.
 
 Quoted-printable represents 8-bit data in 2-digit hexadecimal format, such as =XX. For example, "あ" in UTF-8 becomes "=E3=81=82". 7-bit printable characters such as "A" are not converted.
+
+## Usage
+
+Quoted-printable is a utility function that can be used to convert text to Quoted-printable. Here's an example of how to use it:
+
+```
+INPUT: This is a string.
+
+OUTPUT: 'This is a string'.
+```
+
+## Parameters
+
+### Quotes
+
+The `quotes` parameter can be used to specify the type of quotes to use in the Quoted-printable encoding. The default value is `double`.
+
+```
+INPUT: This is a string.
+
+OUTPUT: "This is a string."
+```
+
+```
+INPUT: This is a string.
+
+OUTPUT: 'This is a string.'
+```
+
