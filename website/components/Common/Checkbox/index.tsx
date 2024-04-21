@@ -21,18 +21,20 @@ const Checkbox: React.FC<CheckboxProps> = ({
   };
 
   return (
-    <label className={cn('flex items-center', className)}>
-      <input
-        type="checkbox"
-        checked={checked}
-        onChange={handleChange}
-        className="form-checkbox h-5 w-5 text-blue-600 transition duration-150 ease-in-out"
-        {...props}
-      />
-      {label && (
-        <span className="ml-2 text-gray-700 text-sm font-medium">{label}</span>
-      )}
-    </label>
+    <div className='flex items-center space-x-2'>
+      <label className={cn('text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70', className)}>
+        <input
+          type="checkbox"
+          checked={checked}
+          onChange={handleChange}
+          className="peer h-4 w-4 shrink-0 rounded-sm border border-primary shadow focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50 data-[state=checked]:bg-primary data-[state=checked]:text-primary-foreground"
+          {...props}
+        />
+        {label && (
+          <span className="ml-2 text-gray-700 text-sm font-medium">{label}</span>
+        )}
+      </label>
+    </div>
   );
 };
 
