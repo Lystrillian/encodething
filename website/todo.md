@@ -38,9 +38,9 @@
 
 - Ctime - [X]
 - ISO8601 - [X]
-- RFC2822 - []
-- Unix Times - []
-- W3C DTF - []
+- RFC2822 - [X]
+- Unix Times - [X]
+- W3C DTF - [X]
 
 ### Colors
 
