@@ -5,12 +5,14 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint components/**/*.tsx --ext .ts --cache",
-    "lint:fix": "pnpm lint --fix"
+    "lint:fix": "pnpm lint --fix",
+    "test-ct": "playwright test -c playwright-ct.config.ts"
   },
   "dependencies": {
     "@algora/sdk": "^0.2.0",
     "@studio-freight/lenis": "^1.0.42",
     "@tailwindcss/line-clamp": "^0.4.4",
+    "@types/jest": "^29.5.12",
     "@vercel/analytics": "^1.2.2",
     "@vercel/og": "^0.6.2",
     "@vercel/speed-insights": "^1.0.10",
@@ -37,7 +39,9 @@
     "tailwindcss": "^3.4.1"
   },
   "devDependencies": {
+    "@playwright/experimental-ct-react": "^1.43.1",
     "@playwright/test": "^1.43.1",
+    "@types/bun": "latest",
     "@types/dedent": "^0.7.2",
     "@types/node": "20.11.30",
     "@types/react": "^18.2.72",
@@ -45,5 +49,8 @@
     "stylelint": "^16.3.1",
     "stylelint-config-standard": "^36.0.0",
     "typescript": "^5.4.3"
-  }
+  },
+  "name": "website",
+  "module": "index.ts",
+  "type": "module"
 }
