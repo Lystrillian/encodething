@@ -1,4 +1,4 @@
-import { DescriptionIcon } from '../Icon/icons';
+import { DescriptionIcon } from '../../Icon/icons';
 import styles from './description.module.css';
 import * as React from 'react';
 import { cn } from '../../../lib/utils';

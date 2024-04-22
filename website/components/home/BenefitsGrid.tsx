@@ -2,8 +2,8 @@ import Image from 'next/image';
 import { useTranslations } from '../../hooks/use-translations';
 import IllustrationSettings from '../../public/illu1.svg';
 import IllustrationTyping from '../../public/illu2.svg';
-import { Typography } from '@typography';
-import { Settings, Typing } from '@components/Common/Icon';
+import { Typography } from '@components/Common/Typography/typography';
+import { Settings, Typing } from '@components/Icon/icons';
 
 const benefitsData = [
   {

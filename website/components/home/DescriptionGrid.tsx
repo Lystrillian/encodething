@@ -1,4 +1,6 @@
+import DescriptionSection from '@components/Containers/Description/DescriptionSection';
 import { useTranslations } from '../../hooks/use-translations';
+import { FeatureSection } from '@components/Containers/Description/FeatureSection';
 export default function DescriptionGrid() {
   const { description } = useTranslations();
   const descriptions = [
@@ -21,24 +23,7 @@ export default function DescriptionGrid() {
           className="shadow-[0_0_0_1px_rgba(255,255,255,0.14)] col-start-1 col-end-3 row-start-1 row-end-1 lg:col-end-2 lg:py-[90px] lg:px-12"
           aria-labelledby="description-heading"
         >
-          <h2
-            id="description-heading"
-            className="text-center font-semibold text-ds-gray-900 tracking-[-0.05em]"
-            style={{ fontSize: 'clamp(1.5rem, 1.357rem + 0.71vw, 2.25rem)' }}
-          >
-            {description.dataTypes}
-          </h2>
-          <div className="flex flex-wrap justify-center gap-4 mx-auto mt-3">
-            {descriptions.map((description, index) => (
-              <div
-                className="px-4 bg-layout-main rounded-full min-h-[48px] text-center flex justify-center items-center font-semibold leading-[1.3125] text-ds-gray-900 tracking-[-0.05em] shadow-[0_0_0_1px_rgba(255,255,255,0.14)]"
-                style={{ fontSize: 'clamp(1rem, 0.714rem + 1.43vw, 2rem)' }}
-                key={index}
-              >
-                {description}
-              </div>
-            ))}
-          </div>
+          <DescriptionSection items={descriptions} title={description.dataTypes} />
         </div>
 
         <div className="shadow-[0_0_0_1px_rgba(255,255,255,0.14)] hidden lg:block lg:col-start-2 lg:col-end-2 lg:row-start-1 lg:row-end-1 lg:py-[90px] lg:px-12 ">
@@ -69,24 +54,9 @@ export default function DescriptionGrid() {
 
         <div className="shadow-[0_0_0_1px_rgba(255,255,255,0.14)] col-start-1 col-end-3 row-start-3 row-end-3 p-12 lg:py-[90px] lg:px-12 lg:col-start-1 lg:col-end-4 lg:row-start-2 lg:row-end-2 w-full">
           <div className="lg:flex lg:text-left lg:justify-between lg:w-full">
-            <p className="lg:max-w-[260px] text-ds-gray-900 text-[16px] lg:text-[18px]">
-              <span className="font-semibold text-ds-gray-1000">
-                {description.dataVariety}
-              </span>{' '}
-              {description.selectData}
-            </p>
-            <p className="lg:max-w-[260px] text-ds-gray-900 text-[16px] lg:text-[18px]">
-              <span className="font-semibold text-ds-gray-1000">
-                {description.transformationWays}
-              </span>{' '}
-              {description.encryptionMethods}
-            </p>
-            <p className="lg:max-w-[260px] text-ds-gray-900 text-[16px] lg:text-[18px]">
-              <span className="font-semibold text-ds-gray-1000">
-                {description.support}
-              </span>{' '}
-              {description.languages}
-            </p>
+            <FeatureSection title={description.dataVariety} description={description.selectData} />
+            <FeatureSection title={description.transformationWays} description={description.encryptionMethods} />
+            <FeatureSection title={description.support} description={description.languages} />
           </div>
         </div>
       </section>

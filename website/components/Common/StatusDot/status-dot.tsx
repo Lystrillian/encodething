@@ -5,7 +5,7 @@ import {
   BuildingDotIcon,
   CancelledDotIcon,
   QueuedDotIcon,
-} from '../Icon/icons';
+} from '../../Icon/icons';
 import { cn } from '../../../lib/utils';
 import styles from './status-dot.module.css';
 

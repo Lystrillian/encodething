@@ -1,4 +1,4 @@
-import { Copy, Tick } from '../Icon/icons';
+import { Copy, Tick } from '../../Icon/icons';
 import React, { useState } from 'react';
 
 export default function Snippet({ text }: { text: string }) {

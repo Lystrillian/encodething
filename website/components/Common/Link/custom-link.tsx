@@ -1,6 +1,6 @@
 import * as React from 'react';
 import Link from 'next/link';
-import { ExternalLinkIcon } from '../Icon/icons';
+import { ExternalLinkIcon } from '../../Icon/icons';
 import { cn } from '../../../lib/utils';
 import styles from './custom-link.module.css';
 
