@@ -1,32 +1,30 @@
-import React, { ReactNode } from 'react';
+import * as React from 'react';
 import { cn } from '../../../lib/utils';
 
-interface AspectRatioProps {
+interface AspectRatioProps extends React.HTMLAttributes<HTMLDivElement> {
   ratio: number;
-  children: ReactNode;
-  className?: string;
+  children: React.ReactNode;
 }
 
-const AspectRatio: React.FC<AspectRatioProps> = ({
-  ratio,
-  children,
-  className,
-}) => {
-  const paddingBottom = `${(1 / ratio) * 100}%`;
+const AspectRatio = React.forwardRef<HTMLDivElement, AspectRatioProps>(
+  ({ ratio, children, className, ...props }, ref) => {
+    const paddingBottom = `${(1 / ratio) * 100}%`;
 
-  return (
-    <div
-      className={cn(
-        'relative w-full overflow-hidden',
-        className
-      )}
-      style={{ paddingBottom }}
-    >
-      <div className="absolute top-0 left-0 w-full h-full flex justify-center items-center">
-        {children}
+    return (
+      <div
+        ref={ref}
+        className={cn('relative w-full overflow-hidden', className)}
+        style={{ paddingBottom }}
+        {...props}
+      >
+        <div className="absolute inset-0 flex items-center justify-center">
+          {children}
+        </div>
       </div>
-    </div>
-  );
-};
+    );
+  }
+);
+
+AspectRatio.displayName = 'AspectRatio';
 
 export default AspectRatio;
