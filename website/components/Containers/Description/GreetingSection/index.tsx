@@ -1,7 +1,7 @@
 // components/ui/GreetingSection.tsx
 import * as React from 'react'
 import { cn } from '@utils'
-import GreetingItem from '../GreetingItem'
+import GreetingItem from '../../../Items/GreetingItem'
 
 interface GreetingSectionProps extends React.HTMLAttributes<HTMLDivElement> {
   greetings: React.ReactNode[]

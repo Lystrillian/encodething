@@ -13,10 +13,6 @@
     "type": "page",
     "title": "Docs"
   },
-  "converters": {
-    "type": "page",
-    "title": "Converters"
-  },
   "telemetry": {
     "display": "hidden",
     "type": "page",

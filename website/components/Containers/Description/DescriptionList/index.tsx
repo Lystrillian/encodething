@@ -1,5 +1,5 @@
 import * as React from 'react'
-import DescriptionItem from '../DescriptionItem'
+import DescriptionItem from '../../../Items/DescriptionItem'
 import styles from './index.module.css'
 
 interface DescriptionListProps extends React.HTMLAttributes<HTMLDivElement> {

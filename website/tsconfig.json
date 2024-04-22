@@ -2,7 +2,11 @@
   "compilerOptions": {
     "baseUrl": ".",
     "target": "es5",
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "lib": [
+      "dom",
+      "dom.iterable",
+      "esnext"
+    ],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
@@ -17,26 +21,76 @@
     "module": "esnext",
     "resolveJsonModule": true,
     "paths": {
-      "@components/*": ["components/*"],
-      "react": ["./node_modules/@types/react"],
-      "react-dom": ["./node_modules/@types/react-dom"],
-      "@aspect-ratio": ["components/Common/AspectRatio/aspect-ratio.tsx"],
-      "@badge": ["./components/Common/Badge/index.tsx"],
-      "@checkbox": ["components/Common/Checkbox/checkbox.tsx"],
-      "@description": ["components/Common/Description/description.tsx"],
-      "@icon": ["components/Icon/icons.tsx"],
-      "@keyboard-input": ["components/Common/KeyboardInput/keyboard-input.tsx"],
-      "@link": ["components/Common/Link/custom-link.tsx"],
-      "@progress": ["components/Common/Progress/progress.tsx"],
-      "@snippet": ["components/Common/Snippet/snippet.tsx"],
-      "@status-dot": ["components/Common/StatusDot/status-dot.tsx"],
-      "@table": ["components/Common/Table/table.tsx"],
-      "@textarea": ["components/Common/Textarea/textarea.tsx"],
-      "@typography": ["components/Common/Typography/typography.tsx"],
-      "@hooks/*": ["./hooks/*"],
-      "@utils": ["./lib/utils.ts"],
-    }
+      "@components/*": [
+        "components/*"
+      ],
+      "react": [
+        "./node_modules/@types/react"
+      ],
+      "react-dom": [
+        "./node_modules/@types/react-dom"
+      ],
+      "@aspect-ratio": [
+        "components/Common/AspectRatio/aspect-ratio.tsx"
+      ],
+      "@badge": [
+        "./components/Common/Badge/index.tsx"
+      ],
+      "@checkbox": [
+        "components/Common/Checkbox/checkbox.tsx"
+      ],
+      "@description": [
+        "components/Common/Description/description.tsx"
+      ],
+      "@icon": [
+        "components/Icon/icons.tsx"
+      ],
+      "@keyboard-input": [
+        "components/Common/KeyboardInput/keyboard-input.tsx"
+      ],
+      "@link": [
+        "components/Common/Link/custom-link.tsx"
+      ],
+      "@progress": [
+        "components/Common/Progress/progress.tsx"
+      ],
+      "@snippet": [
+        "components/Common/Snippet/snippet.tsx"
+      ],
+      "@status-dot": [
+        "components/Common/StatusDot/status-dot.tsx"
+      ],
+      "@table": [
+        "components/Common/Table/table.tsx"
+      ],
+      "@textarea": [
+        "components/Common/Textarea/textarea.tsx"
+      ],
+      "@typography": [
+        "components/Common/Typography/typography.tsx"
+      ],
+      "@hooks/*": [
+        "./hooks/*"
+      ],
+      "@utils": [
+        "./lib/utils.ts"
+      ]
+    },
+    "plugins": [
+      {
+        "name": "next"
+      }
+    ]
   },
-  "include": ["video.d.ts", "next-env.d.ts", "**/*.ts", "**/*.tsx", "middleware.js"],
-  "exclude": ["node_modules"]
+  "include": [
+    "video.d.ts",
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "middleware.js",
+    ".next/types/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
 }

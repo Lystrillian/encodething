@@ -12,6 +12,8 @@ const withNextra = nextra({
  */
 const nextConfig = {
   transpilePackages: ['react-tweet'],
+  reactStrictMode: true,
+  trailingSlash: true,
   i18n: {
     locales: ['en-US'],
     defaultLocale: 'en-US',

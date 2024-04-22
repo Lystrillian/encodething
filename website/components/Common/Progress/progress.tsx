@@ -1,9 +1,9 @@
-import React from 'react';
+import React, { forwardRef } from 'react';
 import { cva, VariantProps } from 'class-variance-authority';
-import styles from './progress.module.css';
+import { cn } from '@utils';
 
 const progressBarStyles = cva(
-  'w-fit h-2 rounded-md bg-ds-gray-1000 overflow-hidden',
+  'w-fit h-2 rounded-md bg-gray-1000 overflow-hidden',
   {
     variants: {
       variant: {
@@ -27,27 +27,30 @@ type ProgressBarProps = {
   maxWidth?: string;
 } & VariantProps<typeof progressBarStyles>;
 
-const ProgressBar: React.FC<ProgressBarProps> = ({
-  id,
-  percentage,
-  variant,
-  maxWidth,
-}) => {
-  return (
-    <div>
-      <label htmlFor={id} className={styles.l}>
-        Progress
-      </label>
-      <div className={styles.c} style={{ maxWidth }}>
-        {' '}
+const ProgressBar = forwardRef<HTMLDivElement, ProgressBarProps>(
+  ({ id, percentage, variant, maxWidth, ...props }, ref) => {
+    return (
+      <div ref={ref} {...props}>
+        <label htmlFor={id} className="font-medium text-sm mb-1">
+          Progress
+        </label>
         <div
-          className={`h-full ${progressBarStyles({ variant })}`}
-          style={{ width: `${percentage}%` }}
-        ></div>
+          className={cn(
+            'relative w-full bg-gray-200 rounded-md overflow-hidden',
+            maxWidth ? `max-w-[${maxWidth}]` : '',
+          )}
+        >
+          <div
+            className={cn(progressBarStyles({ variant }))}
+            style={{ width: `${percentage}%` }}
+          />
+        </div>
+        <span className="text-sm text-gray-600 mt-1">{percentage}%</span>
       </div>
-      <span className={styles.s}>{percentage}%</span>
-    </div>
-  );
-};
+    );
+  },
+);
+
+ProgressBar.displayName = 'ProgressBar';
 
 export default ProgressBar;
