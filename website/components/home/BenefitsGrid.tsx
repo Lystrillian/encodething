@@ -1,5 +1,5 @@
 import Image from 'next/image';
-import useTranslations from '../../hooks/use-translations';
+import { useTranslations } from '../../hooks/use-translations';
 import IllustrationSettings from '../../public/illu1.svg';
 import IllustrationTyping from '../../public/illu2.svg';
 import { Typography } from '@components/Common/Typography/typography';
